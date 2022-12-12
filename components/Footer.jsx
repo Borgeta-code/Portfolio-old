@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import github from "../public/github.png";
-import linkedin from "../public/linkedin.png";
+import github from "../public/github.svg";
+import linkedin from "../public/linkedin.svg";
 import { motion } from "framer-motion";
 
 export function Footer() {
@@ -17,54 +17,47 @@ export function Footer() {
             damping: 20,
             staggerChildren: 0.5,
           }}
-          viewPort={{ once: false, amount: 1 }}
           className="w-52 border-solid border-b-2 border-b-roxo"
         />
 
-        <a href={"https://github.com/Borgeta-code"}>
+        <a
+          href={"https://github.com/Borgeta-code"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <motion.div
-            whileHover={{ scale: 1.2, rotate: 360 }}
-            whileTap={{
-              scale: 0.8,
-              rotate: -360,
-              borderRadius: "100%",
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 60,
-              damping: 20,
-              staggerChildren: 0.5,
-            }}
-            className="flex justify-center items-center w-10 h-10 border-solid border-2 border-roxo rounded-lg"
+            initial={{ opacity: 0.7 }}
+            whileHover={{ opacity: 1, scale: 1.4 }}
+            whileTap={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="flex justify-center items-center"
           >
             <Image
               src={github}
-              className="w-6"
+              id="socials"
+              className="w-8"
               draggable="false"
               alt="github"
             />
           </motion.div>
         </a>
 
-        <a href={"https://www.linkedin.com/in/matheus-borges-4a7469239/"}>
+        <a
+          href={"https://www.linkedin.com/in/matheus-borges-4a7469239/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <motion.div
-            whileHover={{ scale: 1.2, rotate: 360 }}
-            whileTap={{
-              scale: 0.8,
-              rotate: -360,
-              borderRadius: "100%",
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 60,
-              damping: 20,
-              staggerChildren: 0.5,
-            }}
-            className="flex justify-center items-center w-10 h-10 border-solid border-2 border-roxo rounded-lg"
+            initial={{ opacity: 0.7 }}
+            whileHover={{ opacity: 1, scale: 1.4 }}
+            whileTap={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="flex justify-center items-center"
           >
             <Image
               src={linkedin}
-              className="w-4"
+              id="socials"
+              className="w-8"
               draggable="false"
               alt="linkedin"
             />
@@ -80,7 +73,6 @@ export function Footer() {
             damping: 20,
             staggerChildren: 0.5,
           }}
-          viewPort={{ once: false, amount: 1 }}
           className="w-52 border-solid border-b-2 border-b-roxo"
         />
       </div>

@@ -24,9 +24,7 @@ export default function Home() {
 
       <div className="bg-home h-screen">
         <div className="flex justify-center items-center">
-          <div className="border-b w-max border-b-gray border-opacity-10">
-            <Nav />
-          </div>
+          <Nav />
         </div>
 
         <div data-aos="zoom-in-up" className="mt-6">

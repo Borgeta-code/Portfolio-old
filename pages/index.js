@@ -1,10 +1,20 @@
 import Head from "next/head";
+import React, { useRef } from "react";
 import { Presentation } from "../components/Presentation";
 import { Skills } from "../components/Skills";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
+import { Education } from "../components/Education";
+import { motion, useScroll } from "framer-motion";
+import { Certificates } from "../components/Certificates";
+import useScrollSnap from "react-use-scroll-snap";
 
 export default function Home() {
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
+
+  const { scrollYProgress } = useScroll();
+
   return (
     <div>
       <Head>
@@ -23,13 +33,26 @@ export default function Home() {
         />
       </Head>
 
-      <main className="">
-        <section className="flex justify-center min-h-screen bg-home">
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
+
+      <main ref={scrollRef}>
+        <section className="flex justify-center min-h-screen bg-home ">
           <Presentation />
         </section>
 
         <section className="flex justify-center min-h-screen bg-home">
           <Skills />
+        </section>
+
+        <section className="flex justify-center min-h-screen bg-home">
+          <Education />
+        </section>
+
+        <section className="flex justify-center min-h-screen bg-home">
+          <Certificates />
         </section>
 
         <section className="flex justify-center min-h-screen bg-home">
