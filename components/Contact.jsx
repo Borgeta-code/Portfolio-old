@@ -18,7 +18,12 @@ export function Contact() {
           delay: 0.7,
         }}
       >
-        <Image src={airplane} className="w-12" draggable="false" alt="avião" />
+        <Image
+          src={airplane}
+          className="w-12"
+          draggable="false"
+          alt="airplane"
+        />
       </motion.div>
 
       <motion.div
@@ -31,7 +36,7 @@ export function Contact() {
           delay: 1.3,
         }}
       >
-        <h3 className="-mb-1 text-2xl text-white font-bold px-2" id="title">
+        <h3 className="mb-2 md:-mb-1 text-2xl text-white font-bold" id="title">
           Let's talk
         </h3>
       </motion.div>
@@ -45,7 +50,7 @@ export function Contact() {
           damping: 20,
           delay: 1.7,
         }}
-        className="flex  justify-center items-center "
+        className="flex justify-center items-center "
       >
         <Form />
       </motion.div>

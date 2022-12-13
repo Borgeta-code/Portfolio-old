@@ -39,23 +39,23 @@ export default function Home() {
       />
 
       <main ref={scrollRef}>
-        <section className="flex justify-center min-h-screen bg-home ">
+        <section className="flex flex-col justify-center h-screen bg-home">
           <Presentation />
         </section>
 
-        <section className="flex justify-center min-h-screen bg-home">
+        <section className="flex justify-center h-screen bg-home">
           <Skills />
         </section>
 
-        <section className="flex justify-center min-h-screen bg-home">
+        <section className="flex justify-center h-screen bg-home">
           <Education />
         </section>
 
-        <section className="flex justify-center min-h-screen bg-home">
+        <section className="flex justify-center h-screen bg-home">
           <Certificates />
         </section>
 
-        <section className="flex justify-center min-h-screen bg-home">
+        <section className="flex justify-center h-screen bg-home">
           <Contact />
         </section>
       </main>

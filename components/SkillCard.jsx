@@ -15,15 +15,16 @@ export function SkillCard(props) {
     <div>
       <motion.li
         variants={item}
-        className="flex flex-col justify-center items-center mt-5 mb-5"
+        className="flex flex-col justify-center items-center mt-2 mb-2 md:mt-5 md:mb-5"
       >
         <Image
-          id="skills"
+          id="color"
           src={props.src}
           className={props.w}
           draggable="false"
+          alt="skill"
         />
-        <h3 className="text-gray opacity-75 text-sm font-bold mt-1">
+        <h3 className="text-gray opacity-75 text-xs md:text-sm font-bold mt-1">
           {props.skill}
         </h3>
       </motion.li>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body::-webkit-scrollbar {
-  width: 2px;
+  width: 0px;
 }
 
 body::-webkit-scrollbar-track {
@@ -12,11 +12,11 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: transparent;
-  border-radius: 20px;
 }
 
 html,
 body {
+  background-color: #000012;
   padding: 0;
   margin: 0;
   font-family: "Inter", -apple-system;

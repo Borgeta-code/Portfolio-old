@@ -24,16 +24,8 @@ export function Education() {
     },
   };
 
-  const item2 = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
-
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center -mt-6">
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -44,7 +36,7 @@ export function Education() {
           staggerChildren: 0.3,
           delay: 0.7,
         }}
-        className="flex flex-col justify-center items-center font-bold -mt-12 mb-5"
+        className="flex flex-col justify-center items-center font-bold mb-3"
       >
         <motion.div
           initial={{ x: 150 }}
@@ -59,10 +51,11 @@ export function Education() {
           className="flex justify-center items-center"
         >
           <Image
-            id="skills"
+            id="color"
             src={education}
-            className="w-12 mb-2"
+            className="w-16 -mb-1"
             draggable="false"
+            alt="education"
           />
         </motion.div>
 
@@ -73,19 +66,19 @@ export function Education() {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col justify-center items-center "
+        className="flex flex-col justify-center items-center p-2 max-[320px]:p-1 "
       >
         <motion.li
           variants={item}
           className="flex flex-col justify-center items-center mt-5 mb-5"
         >
-          <h3 className="text-gray text-lg font-bold border-b-2 border-b-roxo">
+          <h3 className="text-gray text-base md:text-lg font-bold border-b-2 border-b-roxo">
             Análise e Desenvolvimento de Sistemas
           </h3>
           <span className="text-gray text-base opacity-60 mt-2">
             Universidade Cruzeiro do Sul
           </span>
-          <span className="text-roxo font-bold text-base mt-2">
+          <span className="text-roxo font-bold text-sm md:text-base mt-2">
             2023 - 2024
           </span>
         </motion.li>
@@ -104,16 +97,16 @@ export function Education() {
         />
 
         <motion.li
-          variants={item2}
+          variants={item}
           className="flex flex-col justify-center items-center mt-5 mb-5"
         >
-          <h3 className="text-gray text-lg font-bold border-b-2 border-b-roxo">
+          <h3 className="text-gray text-base md:text-lg font-bold border-b-2 border-b-roxo">
             Desenvolvimento de Sistemas
           </h3>
           <span className="text-gray text-base opacity-60 mt-2">
             ETEC Doutor Celso Giglio
           </span>
-          <span className="text-roxo font-bold text-base mt-2">
+          <span className="text-roxo font-bold text-sm md:text-base mt-2">
             2020 - 2022
           </span>
         </motion.li>

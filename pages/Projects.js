@@ -22,15 +22,13 @@ export default function Home() {
         />
       </Head>
 
-      <div className="bg-home h-screen">
-        <div className="flex justify-center items-center">
+      <section className="flex flex-col justify-center h-screen bg-home">
+        <div className="flex items-center justify-center absolute top-0 mb-5">
           <Nav />
         </div>
 
-        <div data-aos="zoom-in-up" className="mt-6">
-          <Project />
-        </div>
-      </div>
+        <Project />
+      </section>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export function Footer() {
   return (
     <div className="flex items-center justify-center h-36 bg-home">
-      <div className="flex justify-between items-center w-max gap-12">
+      <div className="flex justify-between items-center w-max gap-5 md:gap-12">
         <motion.div
           initial={{ scale: 0, x: -50 }}
           whileInView={{ scale: 1, x: 0 }}
@@ -17,7 +17,7 @@ export function Footer() {
             damping: 20,
             staggerChildren: 0.5,
           }}
-          className="w-52 border-solid border-b-2 border-b-roxo"
+          className="w-20 md:w-52 border-solid border-b-2 border-b-roxo"
         />
 
         <a
@@ -34,7 +34,7 @@ export function Footer() {
           >
             <Image
               src={github}
-              id="socials"
+              id="color"
               className="w-8"
               draggable="false"
               alt="github"
@@ -56,7 +56,7 @@ export function Footer() {
           >
             <Image
               src={linkedin}
-              id="socials"
+              id="color"
               className="w-8"
               draggable="false"
               alt="linkedin"
@@ -73,7 +73,7 @@ export function Footer() {
             damping: 20,
             staggerChildren: 0.5,
           }}
-          className="w-52 border-solid border-b-2 border-b-roxo"
+          className=" w-20 md:w-52 border-solid border-b-2 border-b-roxo"
         />
       </div>
     </div>

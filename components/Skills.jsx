@@ -12,7 +12,7 @@ import laravel from "../public/laravel.svg";
 import tailwind from "../public/tailwindcss.svg";
 import next from "../public/next-js.svg";
 import boot from "../public/bootstrap.svg";
-import star from "../public/star.svg";
+import skills from "../public/skills.svg";
 
 export function Skills() {
   const container = {
@@ -21,7 +21,7 @@ export function Skills() {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.8,
+        delayChildren: 0.6,
         staggerChildren: 0.2,
       },
     },
@@ -34,19 +34,19 @@ export function Skills() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{
           type: "spring",
-          stiffness: 80,
+          stiffness: 60,
           damping: 20,
           staggerChildren: 0.3,
           delay: 0.7,
         }}
-        className="flex flex-col justify-center items-center font-bold -mt-12 mb-5"
+        className="flex flex-col justify-center items-center font-bold mb-1 -mt-5 md:mt-0"
       >
         <motion.div
           initial={{ x: 150 }}
           whileInView={{ x: 0 }}
           transition={{
             type: "spring",
-            stiffness: 80,
+            stiffness: 60,
             damping: 20,
             staggerChildren: 0.3,
             delay: 0.7,
@@ -54,10 +54,11 @@ export function Skills() {
           className="flex justify-center items-center"
         >
           <Image
-            id="skills"
-            src={star}
-            className="w-10 mb-2"
+            id="color"
+            src={skills}
+            className="w-20 -mb-1"
             draggable="false"
+            alt="skills"
           />
         </motion.div>
 
@@ -69,22 +70,34 @@ export function Skills() {
           variants={container}
           initial="hidden"
           whileInView="visible"
-          className="flex flex-col justify-center items-center "
+          className="flex flex-col w-max justify-center items-center"
         >
-          <div className="flex justify-center items-center w-max p-4 gap-10">
-            <SkillCard src={html} skill="HTML" w="w-14" />
-            <SkillCard src={css} skill="CSS" w="w-14" />
-            <SkillCard src={js} skill="JAVASCRIPT" w="w-16" />
-            <SkillCard src={php} skill="PHP" w="w-20 mb-2" />
-            <SkillCard src={react} skill="REACT" w="w-20" />
+          <div className="flex justify-center items-center w-max p-4 gap-6 md:gap-10">
+            <SkillCard src={html} skill="HTML" w="w-8  md:w-14" />
+            <SkillCard src={css} skill="CSS" w="w-8 mb-1 md:w-14" />
+            <SkillCard src={js} skill="JAVASCRIPT" w="w-10  md:w-16" />
+            <SkillCard src={php} skill="PHP" w="w-12 mb-1 md:w-20 md:mb-2" />
+            <SkillCard src={react} skill="REACT" w="w-12  md:w-20" />
           </div>
 
-          <div className="flex justify-center items-center w-max p-4 gap-8">
-            <SkillCard src={next} skill="NEXTJS" w="w-16 mb-3" />
-            <SkillCard src={laravel} skill="LARAVEL" w="w-24 mb-2" />
-            <SkillCard src={boot} skill="BOOTSTRAP" w="w-24 mb-2" />
-            <SkillCard src={tailwind} skill="TAILWINDCSS" w="w-24 mb-2" />
-            <SkillCard src={git} skill="GITHUB" w="w-16 mb-3" />
+          <div className="flex justify-center items-center w-max p-4 gap-4 md:gap-6">
+            <SkillCard src={next} skill="NEXT" w="w-8 mb-1 md:w-16 md:mb-3" />
+            <SkillCard
+              src={laravel}
+              skill="LARAVEL"
+              w="w-12  md:w-24 md:mb-2"
+            />
+            <SkillCard src={boot} skill="BOOTSTRAP" w="w-12  md:w-24 md:mb-2" />
+            <SkillCard
+              src={tailwind}
+              skill="TAILWIND"
+              w="w-12  md:w-24 md:mb-2"
+            />
+            <SkillCard
+              src={git}
+              skill="GITHUB"
+              w="w-8 mb-0.5 md:w-16 md:mb-3"
+            />
           </div>
         </motion.ul>
       </div>
