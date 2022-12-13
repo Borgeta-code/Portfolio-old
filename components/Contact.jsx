@@ -37,7 +37,7 @@ export function Contact() {
         }}
       >
         <h3 className="mb-2 md:-mb-1 text-2xl text-white font-bold" id="title">
-          Let's talk
+          Let&apos;s talk
         </h3>
       </motion.div>
 
