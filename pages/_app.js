@@ -2,6 +2,11 @@ import "../styles/globals.css";
 import "../styles/components.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -24,6 +29,7 @@ function MyApp({ Component, pageProps }) {
         transition={{
           duration: 0.85,
         }}
+        className={inter.className}
       >
         <Component {...pageProps} />
       </motion.div>
