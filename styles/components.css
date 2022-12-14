@@ -61,7 +61,7 @@
 
 #allsides-2 {
   color: #8600f0;
-  border-radius: 2px;
+  border-radius: 3px;
   background: linear-gradient(currentColor 0 0) 0 0,
     linear-gradient(currentColor 0 0) 0 0,
     linear-gradient(currentColor 0 0) 100% 100%,
@@ -125,7 +125,7 @@
   }
 
   #button {
-    padding: 15px 35px;
+    padding: 20px 50px;
     border-radius: 8px;
   }
 
@@ -134,10 +134,8 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  #nav {
-    display: none;
-  }
+#button-container #button:disabled {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {

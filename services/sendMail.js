@@ -1,13 +1,14 @@
 import axios from "axios";
 
-export const sendMail = async (nome, senderMail, content) => {
+export const sendMail = async (nome, email, message) => {
   const data = {
     nome,
-    senderMail,
-    content,
+    email,
+    message,
   };
+
   try {
-    return await axios.post("../pages/api/Contact", data);
+    return await axios.post("/api/contact", data);
   } catch (error) {
     return error;
   }

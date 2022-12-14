@@ -6,6 +6,7 @@ export function Form() {
   const [nome, setNome] = useState("");
   const [email, setMail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoad] = useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -25,6 +26,7 @@ export function Form() {
     }
 
     try {
+      setLoad(true);
       await sendMail(nome, email, message);
       setNome("");
       setMail("");
@@ -40,7 +42,8 @@ export function Form() {
           secondary: "#ffffff",
         },
       });
-    } catch {
+      return;
+    } catch (error) {
       toast.error("Ocorreu um erro, tente novamente!", {
         style: {
           background: "#000012",
@@ -52,6 +55,9 @@ export function Form() {
           secondary: "#ffffff",
         },
       });
+      return;
+    } finally {
+      setLoad(false);
     }
   }
 
@@ -88,7 +94,9 @@ export function Form() {
 
         <div id="button-container">
           <div id="allsides-2">
-            <button id="button">Submit</button>
+            <button id="button" disabled={loading}>
+              Submit
+            </button>
           </div>
         </div>
       </form>

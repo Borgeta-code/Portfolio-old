@@ -4,7 +4,7 @@ import Image from "next/image";
 import github from "../public/github.svg";
 import linkedin from "../public/linkedin.svg";
 import { motion } from "framer-motion";
-import { Rotate as Hamburger } from "hamburger-react";
+import { Pivot as Hamburger } from "hamburger-react";
 
 export function Nav() {
   const [isOpen, setOpen] = useState(false);
