@@ -7,7 +7,6 @@ export function Project() {
       <ProjectCard
         name="Agendamento de Salas e Recursos"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu nibh metus. Nulla eleifend erat quis posuere dignissim."
-        src={asr}
       />
     </div>
   );
