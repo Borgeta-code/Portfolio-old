@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import github from "../public/github.svg";
-import linkedin from "../public/linkedin.svg";
+import github from "../public/img/github.svg";
+import linkedin from "../public/img/linkedin.svg";
 import { motion } from "framer-motion";
 
 export function Footer() {

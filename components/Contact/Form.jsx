@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { sendMail } from "../services/sendMail";
+import { sendMail } from "../../services/sendMail";
 
 export function Form() {
   const [nome, setNome] = useState("");
@@ -11,7 +11,7 @@ export function Form() {
   async function handleSubmit(event) {
     event.preventDefault();
     if (!nome || !email || !message) {
-      toast.error("Preencha todos os campos!", {
+      toast.error("fill all the data!", {
         style: {
           background: "#000012",
           color: "#f7f7f7",
@@ -31,7 +31,7 @@ export function Form() {
       setNome("");
       setMail("");
       setMessage("");
-      toast.success("Sua mensagem foi enviada!", {
+      toast.success("Thank you for contacting me!", {
         style: {
           background: "#000012",
           color: "#f7f7f7",
@@ -44,7 +44,7 @@ export function Form() {
       });
       return;
     } catch (error) {
-      toast.error("Ocorreu um erro, tente novamente!", {
+      toast.error("there was an error, please try again!", {
         style: {
           background: "#000012",
           color: "#f7f7f7",
@@ -69,7 +69,7 @@ export function Form() {
         className="flex w-max flex-col justify-center items-center md:p-3"
       >
         <div id="containerInput" className="flex justify-center mb-4">
-          <label>Nome</label>
+          <label>Name</label>
           <input
             type="text"
             value={nome}
@@ -95,7 +95,7 @@ export function Form() {
         <div id="button-container">
           <div id="allsides-2">
             <button id="button" disabled={loading}>
-              Submit
+              Send
             </button>
           </div>
         </div>

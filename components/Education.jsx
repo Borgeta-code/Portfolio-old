@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import education from "../public/education.svg";
+import education from "../public/img/education.svg";
 import { motion } from "framer-motion";
 
 export function Education() {

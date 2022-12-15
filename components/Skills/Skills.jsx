@@ -2,17 +2,17 @@ import React from "react";
 import { SkillCard } from "./SkillCard";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import html from "../public/html5.svg";
-import css from "../public/css3-alt.svg";
-import react from "../public/react.svg";
-import git from "../public/github.svg";
-import php from "../public/php.svg";
-import js from "../public/js.svg";
-import laravel from "../public/laravel.svg";
-import tailwind from "../public/tailwindcss.svg";
-import next from "../public/next-js.svg";
-import boot from "../public/bootstrap.svg";
-import skills from "../public/skills.svg";
+import html from "../../public/img/html5.svg";
+import css from "../../public/img/css3-alt.svg";
+import react from "../../public/img/react.svg";
+import git from "../../public/img/github.svg";
+import php from "../../public/img/php.svg";
+import js from "../../public/img/js.svg";
+import laravel from "../../public/img/laravel.svg";
+import tailwind from "../../public/img/tailwindcss.svg";
+import next from "../../public/img/next-js.svg";
+import boot from "../../public/img/bootstrap.svg";
+import skills from "../../public/img/skills.svg";
 
 export function Skills() {
   const container = {

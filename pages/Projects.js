@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Nav } from "../components/Nav";
-import { Project } from "../components/Project";
+import { Project } from "../components/Projects/Project";
 import { Inter } from "@next/font/google";
 
 const inter = Inter({

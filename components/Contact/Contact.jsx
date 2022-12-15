@@ -1,5 +1,5 @@
 import React from "react";
-import airplane from "../public/airplane.png";
+import airplane from "../../public/img/airplane.svg";
 import Image from "next/image";
 import { Form } from "./Form";
 import { motion } from "framer-motion";
@@ -20,7 +20,8 @@ export function Contact() {
       >
         <Image
           src={airplane}
-          className="w-12"
+          id="color"
+          className="w-12 md:w-14"
           draggable="false"
           alt="airplane"
         />

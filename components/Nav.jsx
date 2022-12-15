@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import github from "../public/github.svg";
-import linkedin from "../public/linkedin.svg";
+import github from "../public/img/github.svg";
+import linkedin from "../public/img/linkedin.svg";
 import { motion } from "framer-motion";
 import { Pivot as Hamburger } from "hamburger-react";
 
@@ -96,8 +96,8 @@ export function Nav() {
             className="flex flex-col justify-center items-center mt-6 mb-6"
           >
             <Link
-              href="#"
-              className="no-underline text-gray text-3xl opacity-10  uppercase"
+              href="/"
+              className="no-underline text-gray text-3xl opacity-25 uppercase"
             >
               Projects
             </Link>
@@ -113,11 +113,28 @@ export function Nav() {
             className="flex flex-col justify-center items-center mt-6 mb-6"
           >
             <a
-              href="../public/curriculum - Matheus Borges.pdf"
-              download="curriculum - Matheus Borges.pdf"
+              href="https://www.canva.com/design/DAFR80w_In4/tsvs5SI924m5z3pEbHa1hA/view?utm_content=DAFR80w_In4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+              target="_blank"
               className="no-underline text-gray text-3xl uppercase"
             >
               curriculum
+            </a>
+          </motion.li>
+
+          <motion.div
+            variants={divider}
+            className=" w-52 border-solid border-b-2 border-b-roxo "
+          />
+
+          <motion.li
+            variants={item}
+            className="flex flex-col justify-center items-center mt-6 mb-6"
+          >
+            <a
+              href="#contact"
+              className="no-underline text-gray text-3xl uppercase"
+            >
+              Contact
             </a>
           </motion.li>
 

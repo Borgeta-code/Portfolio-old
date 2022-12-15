@@ -1,13 +1,13 @@
 import Head from "next/head";
+import useScrollSnap from "react-use-scroll-snap";
 import React, { useRef } from "react";
 import { Presentation } from "../components/Presentation";
-import { Skills } from "../components/Skills";
-import { Contact } from "../components/Contact";
+import { Skills } from "../components/Skills/Skills";
+import { Contact } from "../components/Contact/Contact";
 import { Footer } from "../components/Footer";
 import { Education } from "../components/Education";
 import { motion, useScroll } from "framer-motion";
-import { Certificates } from "../components/Certificates";
-import useScrollSnap from "react-use-scroll-snap";
+import { Certificates } from "../components/Certificate/Certificates";
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -45,7 +45,7 @@ export default function Home() {
           <Certificates />
         </section>
 
-        <section className="flex justify-center h-screen bg-home">
+        <section id="contact" className="flex justify-center h-screen bg-home">
           <Contact />
         </section>
       </main>

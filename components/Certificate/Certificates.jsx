@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import certificate from "../public/certificate.svg";
+import certificate from "../../public/img/certificate.svg";
 import { motion } from "framer-motion";
 import { CertificateCard } from "./CertificateCard";
 
@@ -77,12 +77,7 @@ export function Certificates() {
             }
           />
 
-          <CertificateCard
-            name="Metodologias Ágeis"
-            place="SOULCODE"
-            path={"../public/Metodologias ágeis.jfif"}
-            download="Metodologias ágeis.jfif"
-          />
+          <CertificateCard name="Metodologias Ágeis" place="SOULCODE" />
         </div>
         <div className="flex justify-center items-center gap-4 md:gap-10">
           <CertificateCard name="DevOps & Agile Culture" place="FIAP" />
