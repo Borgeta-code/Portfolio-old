@@ -115,6 +115,7 @@ export function Nav() {
             <a
               href="https://www.canva.com/design/DAFR80w_In4/tsvs5SI924m5z3pEbHa1hA/view?utm_content=DAFR80w_In4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
               target="_blank"
+              rel="noopener noreferrer"
               className="no-underline text-gray text-3xl uppercase"
             >
               curriculum
