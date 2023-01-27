@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Form } from "./Form";
 import { motion } from "framer-motion";
 
-export function Contact() {
+export default function Contact() {
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
