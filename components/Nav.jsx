@@ -8,6 +8,7 @@ import { Pivot as Hamburger } from "hamburger-react";
 
 export function Nav() {
   const [isOpen, setOpen] = useState(false);
+  const menu = useRef(null);
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -35,8 +36,6 @@ export function Nav() {
       scale: 1,
     },
   };
-
-  const menu = useRef(null);
 
   return (
     <div className="w-screen relative flex ">
@@ -96,7 +95,7 @@ export function Nav() {
             className="flex flex-col justify-center items-center mt-6 mb-6"
           >
             <Link
-              href="/"
+              href="/Projects"
               className="no-underline text-gray text-3xl opacity-25 uppercase"
             >
               Projects
@@ -118,7 +117,7 @@ export function Nav() {
               rel="noopener noreferrer"
               className="no-underline text-gray text-3xl uppercase"
             >
-              curriculum
+              resúmé
             </a>
           </motion.li>
 
@@ -132,7 +131,7 @@ export function Nav() {
             className="flex flex-col justify-center items-center mt-6 mb-6"
           >
             <a
-              href="#contact"
+              href="/contact"
               className="no-underline text-gray text-3xl uppercase"
             >
               Contact

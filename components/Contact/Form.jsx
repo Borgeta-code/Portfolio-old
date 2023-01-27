@@ -11,7 +11,7 @@ export function Form() {
   async function handleSubmit(event) {
     event.preventDefault();
     if (!nome || !email || !message) {
-      toast.error("fill all the data!", {
+      toast.error("Preencha todos os campos!", {
         style: {
           background: "#000012",
           color: "#f7f7f7",
@@ -31,7 +31,7 @@ export function Form() {
       setNome("");
       setMail("");
       setMessage("");
-      toast.success("Thank you for contacting me!", {
+      toast.success("Agradeço sua mensagem!", {
         style: {
           background: "#000012",
           color: "#f7f7f7",
@@ -44,7 +44,7 @@ export function Form() {
       });
       return;
     } catch (error) {
-      toast.error("there was an error, please try again!", {
+      toast.error("Houve um erro, tente novamente!", {
         style: {
           background: "#000012",
           color: "#f7f7f7",
@@ -69,7 +69,7 @@ export function Form() {
         className="flex w-max flex-col justify-center items-center md:p-3"
       >
         <div id="containerInput" className="flex justify-center mb-4">
-          <label>Name</label>
+          <label>Nome</label>
           <input
             type="text"
             value={nome}
@@ -85,7 +85,7 @@ export function Form() {
           />
         </div>
         <div id="containerInput" className="flex justify-center mb-4">
-          <label>Message</label>
+          <label>Menssagem</label>
           <textarea
             value={message}
             onChange={({ target }) => setMessage(target.value)}
@@ -95,7 +95,7 @@ export function Form() {
         <div id="button-container">
           <div id="allsides-2">
             <button id="button" disabled={loading}>
-              Send
+              Enviar
             </button>
           </div>
         </div>

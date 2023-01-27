@@ -1,7 +1,6 @@
 import React from "react";
 import { SkillCard } from "./SkillCard";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import html from "../../public/img/html5.svg";
 import css from "../../public/img/css3-alt.svg";
 import react from "../../public/img/react.svg";
@@ -12,7 +11,6 @@ import laravel from "../../public/img/laravel.svg";
 import tailwind from "../../public/img/tailwindcss.svg";
 import next from "../../public/img/next-js.svg";
 import boot from "../../public/img/bootstrap.svg";
-import skills from "../../public/img/skills.svg";
 
 export function Skills() {
   const container = {
@@ -28,42 +26,21 @@ export function Skills() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
+    <section className="flex items-center justify-center h-screen relative">
+      <motion.h1
+        initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{
           type: "spring",
-          stiffness: 60,
+          stiffness: 120,
           damping: 20,
           staggerChildren: 0.3,
-          delay: 0.7,
         }}
-        className="flex flex-col justify-center items-center font-bold mb-1 -mt-5 md:mt-0"
+        className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
       >
-        <motion.div
-          initial={{ x: 150 }}
-          whileInView={{ x: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-            damping: 20,
-            staggerChildren: 0.3,
-            delay: 0.7,
-          }}
-          className="flex justify-center items-center"
-        >
-          <Image
-            id="color"
-            src={skills}
-            className="w-20 -mb-1"
-            draggable="false"
-            alt="skills"
-          />
-        </motion.div>
-
-        <h1 className="flex text-gray text-4xl">SKILLS</h1>
-      </motion.div>
+        <span className="text-roxo text-2xl font-bold"> | </span>
+        Habilidades
+      </motion.h1>
 
       <div className="flex justify-center items-center">
         <motion.ul
@@ -101,6 +78,6 @@ export function Skills() {
           </div>
         </motion.ul>
       </div>
-    </div>
+    </section>
   );
 }

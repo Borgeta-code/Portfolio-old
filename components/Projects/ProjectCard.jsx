@@ -3,28 +3,49 @@ import Image from "next/image";
 
 export function ProjectCard(props) {
   return (
-    <div className="flex flex-col items-center justify-center w-max h-max p-6 rounded-lg border-2 border-roxo relative">
-      <span className="text-gray text-base border-b-2 border-b-roxo">
-        {props.name}
-      </span>
-      <div className="flex justify-center items-center gap-4 mt-4">
-        <Image
-          src={props.src}
-          className="w-96 rounded-lg"
-          draggable="false"
-          alt="project"
-        />
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <Image
+        src={props.src}
+        id="project"
+        className="rounded-lg"
+        draggable="false"
+        alt="projeto"
+      />
 
-        <text className="text-sm text-left text-gray w-60">{props.text}</text>
-      </div>
+      <div id="project" className="flex flex-col gap-3">
+        <h1 className="text-gray text-lg font-medium uppercase">
+          <span className="text-roxo text-xl font-bold"> | </span>
+          {props.name}
+        </h1>
 
-      <div className="mt-4 ">
-        <div id="button-containe">
-          <div id="allsides-2">
-            <button id="button">GITHUB</button>
-          </div>
+        <span className="text-gray text-sm">
+          Aplicação web desenvolvida com {""}
+          <span className="text-roxo text-sm font-bold">
+            {props.description}
+          </span>
+          .
+        </span>
+
+        <div className="flex gap-4">
+          <a
+            className="text-gray text-sm border-b-2 border-b-roxo "
+            target="_blank"
+            rel="noopener noreferrer"
+            href={props.demo}
+          >
+            Demo
+          </a>
+          <a
+            className="text-gray text-sm border-b-2 border-b-roxo"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={props.git}
+          >
+            Github
+          </a>
         </div>
       </div>
     </div>
   );
 }
+//

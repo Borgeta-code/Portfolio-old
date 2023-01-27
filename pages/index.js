@@ -1,13 +1,14 @@
 import Head from "next/head";
 import useScrollSnap from "react-use-scroll-snap";
 import React, { useRef } from "react";
+import { NavBar } from "../components/navBar";
 import { Presentation } from "../components/Presentation";
+import { Projects } from "../components/Projects/Project";
 import { Skills } from "../components/Skills/Skills";
-import { Contact } from "../components/Contact/Contact";
-import { Footer } from "../components/Footer";
 import { Education } from "../components/Education";
-import { motion, useScroll } from "framer-motion";
 import { Certificates } from "../components/Certificate/Certificates";
+import { Contact } from "../components/Contact/Contact";
+import { motion, useScroll } from "framer-motion";
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -28,29 +29,19 @@ export default function Home() {
         style={{ scaleX: scrollYProgress }}
       />
 
-      <main ref={scrollRef}>
-        <section className="flex flex-col justify-center h-screen bg-home">
-          <Presentation />
-        </section>
+      <main className="relative" ref={scrollRef}>
+        <Presentation />
 
-        <section className="flex justify-center h-screen bg-home">
-          <Skills />
-        </section>
+        <Projects />
 
-        <section className="flex justify-center h-screen bg-home">
-          <Education />
-        </section>
+        <Skills />
 
-        <section className="flex justify-center h-screen bg-home">
-          <Certificates />
-        </section>
+        <Education />
 
-        <section id="contact" className="flex justify-center h-screen bg-home">
-          <Contact />
-        </section>
+        <Certificates />
+
+        <Contact />
       </main>
-
-      <Footer />
     </div>
   );
 }

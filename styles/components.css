@@ -6,8 +6,8 @@
 }
 
 #containerInput input {
-  width: 40vw;
-  height: 55px;
+  width: 30vw;
+  height: 50px;
   padding: 10px;
   outline: 0;
   border: 2px solid #8600f0;
@@ -19,8 +19,8 @@
 }
 
 #containerInput textarea {
-  width: 40vw;
-  height: 200px;
+  width: 30vw;
+  height: 150px;
   resize: none;
   padding: 10px;
   outline: 0;
@@ -30,6 +30,18 @@
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 16px;
   color: #f7f7f7;
+}
+
+#containerInput textarea::-webkit-scrollbar {
+  width: 2px;
+}
+
+#containerInput textarea::-webkit-scrollbar-track {
+  background: #000012;
+}
+
+#containerInput textarea::-webkit-scrollbar-thumb {
+  background-color: #7000c5;
 }
 
 #containerInput label {
@@ -90,17 +102,6 @@
     brightness(93%) contrast(119%);
 }
 
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: #8600f0;
-  transform-origin: 0%;
-  z-index: 1000;
-}
-
 .hidden {
   display: none;
 }
@@ -113,6 +114,21 @@
   align-items: center;
   background-color: #000012;
   z-index: 10;
+}
+
+#project {
+  width: 400px;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
 
 @media (max-width: 430px) {
@@ -132,10 +148,20 @@
   #containerInput {
     min-width: 80vw;
   }
-}
 
-#button-container #button:disabled {
-  opacity: 0.5;
+  #project {
+    width: 95vw;
+  }
+
+  .contactForm {
+    display: none;
+  }
+
+  .contactbtn {
+    display: flex;
+    width: 60vw;
+    color: #f7f7f7;
+  }
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
@@ -155,4 +181,12 @@
   #containerInput {
     min-width: 40vw;
   }
+}
+
+.Navbar {
+  width: 80vw;
+}
+
+.SectionTitle {
+  left: 100px;
 }

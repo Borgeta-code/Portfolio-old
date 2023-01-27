@@ -14,7 +14,7 @@ export function CertificateCard(props) {
     <div>
       <motion.li
         variants={item}
-        className="flex flex-col justify-center items-center mt-5 mb-5"
+        className="flex flex-col justify-center items-start mt-2 mb-2"
       >
         <a
           href={props.path}
@@ -23,7 +23,8 @@ export function CertificateCard(props) {
           rel="noopener noreferrer"
           className="no-underline"
         >
-          <h3 className="text-gray text-center text-sm md:text-lg font-bold border-b-2 border-b-roxo">
+          <h3 className="text-gray text-lg">
+            <span className="text-roxo text-lg font-bold"> | </span>
             {props.name}
           </h3>
         </a>

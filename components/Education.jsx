@@ -25,56 +25,37 @@ export function Education() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center -mt-6">
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
+    <section className="flex flex-col items-center justify-center h-screen relative">
+      <motion.h1
+        initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{
           type: "spring",
-          stiffness: 80,
+          stiffness: 120,
           damping: 20,
           staggerChildren: 0.3,
-          delay: 0.7,
         }}
-        className="flex flex-col justify-center items-center font-bold mb-3"
+        className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
       >
-        <motion.div
-          initial={{ x: 150 }}
-          whileInView={{ x: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 80,
-            damping: 20,
-            staggerChildren: 0.3,
-            delay: 0.7,
-          }}
-          className="flex justify-center items-center"
-        >
-          <Image
-            id="color"
-            src={education}
-            className="w-16 -mb-1"
-            draggable="false"
-            alt="education"
-          />
-        </motion.div>
-
-        <h1 className="flex text-gray text-4xl">EDUCATION</h1>
-      </motion.div>
+        <span className="text-roxo text-2xl font-bold"> | </span>
+        Formação
+      </motion.h1>
 
       <motion.ul
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col justify-center items-center p-2 max-[320px]:p-1 "
+        className="flex flex-col justify-center items-start p-2 max-[320px]:p-1 "
       >
         <motion.li
           variants={item}
-          className="flex flex-col justify-center items-center mt-5 mb-5"
+          className="flex flex-col justify-center items-start mb-12"
         >
-          <h3 className="text-gray text-base md:text-lg font-bold border-b-2 border-b-roxo">
+          <span className="text-gray text-lg">
+            <span className="text-roxo text-2xl font-bold"> | </span>
             Análise e Desenvolvimento de Sistemas
-          </h3>
+          </span>
+
           <span className="text-gray text-base opacity-60 mt-2">
             Universidade Cruzeiro do Sul
           </span>
@@ -83,34 +64,23 @@ export function Education() {
           </span>
         </motion.li>
 
-        <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 80,
-            damping: 20,
-            staggerChildren: 0.3,
-            delay: 1.3,
-          }}
-          className="h-12 w-0.5 bg-roxo"
-        />
-
         <motion.li
           variants={item}
-          className="flex flex-col justify-center items-center mt-5 mb-5"
+          className="flex flex-col justify-center items-start"
         >
-          <h3 className="text-gray text-base md:text-lg font-bold border-b-2 border-b-roxo">
+          <span className="text-gray text-lg">
+            <span className="text-roxo text-2xl font-bold"> | </span>
             Desenvolvimento de Sistemas
-          </h3>
+          </span>
+
           <span className="text-gray text-base opacity-60 mt-2">
-            ETEC Doutor Celso Giglio
+            Etec Doutor Celso Giglio
           </span>
           <span className="text-roxo font-bold text-sm md:text-base mt-2">
             2020 - 2022
           </span>
         </motion.li>
       </motion.ul>
-    </div>
+    </section>
   );
 }
