@@ -31,12 +31,12 @@ export default function contato() {
           Contato
         </motion.h1>
 
-        <a
+        <Link
           href="/"
           className="text-roxo text-base font-medium uppercase absolute top-14 left-4"
         >
           ← voltar
-        </a>
+        </Link>
 
         <div className="flex flex-col justify-center items-center p-3">
           <motion.div

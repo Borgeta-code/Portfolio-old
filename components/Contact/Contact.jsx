@@ -1,6 +1,7 @@
 import React from "react";
 import airplane from "../../public/img/airplane.svg";
 import Image from "next/image";
+import Link from "next/link";
 import { Form } from "./Form";
 import { motion } from "framer-motion";
 
@@ -116,12 +117,12 @@ export function Contact() {
         </div>
       </motion.ul>
 
-      <a
+      <Link
         href="/contact"
         className="hidden justify-center items-center p-2 border-2 border-roxo rounded-lg contactbtn"
       >
         Fale comigo
-      </a>
+      </Link>
 
       <div className="flex flex-col justify-center items-center p-3 contactForm">
         <motion.div

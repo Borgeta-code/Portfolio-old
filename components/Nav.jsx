@@ -126,18 +126,6 @@ export function Nav() {
             className=" w-52 border-solid border-b-2 border-b-roxo "
           />
 
-          <motion.li
-            variants={item}
-            className="flex flex-col justify-center items-center mt-6 mb-6"
-          >
-            <a
-              href="/contact"
-              className="no-underline text-gray text-3xl uppercase"
-            >
-              Contact
-            </a>
-          </motion.li>
-
           <motion.div
             variants={divider}
             className=" w-52 border-solid border-b-2 border-b-roxo"
