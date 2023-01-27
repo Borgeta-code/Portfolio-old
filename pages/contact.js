@@ -3,9 +3,8 @@ import Head from "next/head";
 import airplane from "../public/img/airplane.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { Form } from "../components/contact/Form";
+import { Form } from "../components/Contact/Form";
 import { motion } from "framer-motion";
-import { NavBar } from "../components/navBar";
 
 export default function contato() {
   return (
