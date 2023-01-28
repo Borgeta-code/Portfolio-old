@@ -38,7 +38,7 @@ export default function Home() {
 
         <Education />
 
-        <Certificates />
+        {/* <Certificates /> */}
 
         <Contact />
       </main>

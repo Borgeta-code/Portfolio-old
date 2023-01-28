@@ -6,7 +6,7 @@
 }
 
 #containerInput input {
-  width: 30vw;
+  width: 40vw;
   height: 50px;
   padding: 10px;
   outline: 0;
@@ -19,7 +19,7 @@
 }
 
 #containerInput textarea {
-  width: 30vw;
+  width: 40vw;
   height: 150px;
   resize: none;
   padding: 10px;
@@ -152,27 +152,27 @@
   #project {
     width: 95vw;
   }
+}
 
+@media (max-width: 640px) {
   .contactForm {
     display: none;
   }
 
-  .contactbtn {
+  .sendMessage {
     display: flex;
-    width: 60vw;
-    color: #f7f7f7;
+  }
+
+  .embla__slide {
+    margin-right: 20px;
+  }
+
+  .embla__container {
+    width: 100vw;
   }
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
-  #containerInput input {
-    width: 60vw;
-  }
-
-  #containerInput textarea {
-    width: 60vw;
-  }
-
   #button {
     padding: 15px 35px;
     border-radius: 8px;

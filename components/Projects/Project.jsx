@@ -27,7 +27,18 @@ export function Projects() {
           projetos
         </motion.h1>
 
-        <div ref={emblaRef} className="embla p-2">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 20,
+            staggerChildren: 0.3,
+          }}
+          ref={emblaRef}
+          className="embla p-2"
+        >
           <div className="embla__container">
             <div className="embla__slide">
               <ProjectCard
@@ -38,15 +49,17 @@ export function Projects() {
                 git="https://github.com/Borgeta-code/Transimple"
               />
             </div>
-            {/* <div className="embla__slide">
+            <div className="embla__slide">
               <ProjectCard
                 name="QrMaker"
                 description="Nextjs, Tailwind e QrCode"
                 src={Qrmaker}
+                demo="https://qrmaker.vercel.app/"
+                git="https://github.com/Borgeta-code/QrMaker"
               />
-            </div> */}
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

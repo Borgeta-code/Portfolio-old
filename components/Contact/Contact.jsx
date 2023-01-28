@@ -29,7 +29,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col sm:flex-row items-center justify-center h-screen gap-14 relative"
+      className="flex flex-col sm:flex-row items-center justify-center h-screen sm:gap-12 relative"
     >
       <motion.h1
         initial={{ opacity: 0, x: -50 }}
@@ -50,13 +50,26 @@ export function Contact() {
         <div className="flex flex-col justify-center items-start gap-5">
           <motion.li
             variants={item}
+            className="hidden flex-col justify-center items-start sendMessage"
+          >
+            <span className="text-gray text-lg">
+              <span className="text-roxo text-2xl font-bold"> | </span>
+              Fale comigo
+            </span>
+            <Link href="/contact">
+              <span className="text-roxo text-base mt-1">Enviar mensagem</span>
+            </Link>
+          </motion.li>
+
+          <motion.li
+            variants={item}
             className="flex flex-col justify-center items-start"
           >
             <span className="text-gray text-lg">
               <span className="text-roxo text-2xl font-bold"> | </span>
               Email
             </span>
-            <span className="text-gray text-base opacity-60 mt-2">
+            <span className="text-gray text-base opacity-60 mt-1">
               matheusborgescode@gmail.com
             </span>
           </motion.li>
@@ -70,7 +83,7 @@ export function Contact() {
               Telefone
             </span>
 
-            <span className="text-gray text-base opacity-60 mt-2">
+            <span className="text-gray text-base opacity-60 mt-1">
               (11) 957943978
             </span>
           </motion.li>
@@ -84,7 +97,7 @@ export function Contact() {
               Linkedin
             </span>
 
-            <span className="text-gray text-base opacity-60 mt-2">
+            <span className="text-gray text-base opacity-60 mt-1">
               <a
                 href="https://linkedin.com/in/matheus-borges-coder"
                 target="_blank"
@@ -104,7 +117,7 @@ export function Contact() {
               Github
             </span>
 
-            <span className="text-gray text-base opacity-60 mt-2">
+            <span className="text-gray text-base opacity-60 mt-1">
               <a
                 href="https://github.com/Borgeta-code"
                 target="_blank"
@@ -116,13 +129,6 @@ export function Contact() {
           </motion.li>
         </div>
       </motion.ul>
-
-      <Link
-        href="/contact"
-        className="hidden justify-center items-center p-2 border-2 border-roxo rounded-lg contactbtn"
-      >
-        Fale comigo
-      </Link>
 
       <div className="flex flex-col justify-center items-center p-3 contactForm">
         <motion.div
@@ -154,7 +160,7 @@ export function Contact() {
             damping: 20,
             delay: 1.7,
           }}
-          className="flex justify-center items-center mt-2"
+          className="flex justify-center items-center mt-1"
         >
           <Form />
         </motion.div>
