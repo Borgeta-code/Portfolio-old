@@ -130,7 +130,7 @@ export function Contact() {
         </div>
       </motion.ul>
 
-      <div className="flex flex-col justify-center items-center p-3 contactForm">
+      <div className="hidden flex-col justify-center items-center sm:p-3 contactForm">
         <motion.div
           initial={{ opacity: 0, x: -100, y: 100 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -145,7 +145,7 @@ export function Contact() {
           <Image
             src={airplane}
             id="color"
-            className="w-12 md:w-14"
+            className="w-14"
             draggable="false"
             alt="airplane"
           />

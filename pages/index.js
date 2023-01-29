@@ -12,7 +12,7 @@ import { motion, useScroll } from "framer-motion";
 
 export default function Home() {
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
+  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
 
   const { scrollYProgress } = useScroll();
 
@@ -29,7 +29,7 @@ export default function Home() {
         style={{ scaleX: scrollYProgress }}
       />
 
-      <main className="relative" ref={scrollRef}>
+      <main className="relative">
         <Presentation />
 
         <Projects />

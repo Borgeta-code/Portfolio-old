@@ -132,6 +132,28 @@
 }
 
 @media (max-width: 430px) {
+  #project {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .sendMessage {
+    display: flex;
+  }
+
+  .embla__slide {
+    margin-right: 20px;
+  }
+
+  .embla__container {
+    width: 100vw;
+  }
+
+  .btnEmblaMobile {
+    display: flex;
+  }
+
   #containerInput input {
     width: 80vw;
   }
@@ -154,21 +176,13 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
   .contactForm {
-    display: none;
-  }
-
-  .sendMessage {
     display: flex;
   }
 
-  .embla__slide {
-    margin-right: 20px;
-  }
-
-  .embla__container {
-    width: 100vw;
+  .btnEmblaDesktop {
+    display: flex;
   }
 }
 
