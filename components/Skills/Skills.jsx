@@ -11,6 +11,8 @@ import laravel from "../../public/img/laravel.svg";
 import tailwind from "../../public/img/tailwindcss.svg";
 import next from "../../public/img/next-js.svg";
 import boot from "../../public/img/bootstrap.svg";
+import typescript from "../../public/img/typescript.svg";
+import sql from "../../public/img/mysql.svg";
 
 export function Skills() {
   const container = {
@@ -42,14 +44,14 @@ export function Skills() {
         Habilidades
       </motion.h1>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center ">
         <motion.ul
           variants={container}
           initial="hidden"
           whileInView="visible"
           className="flex flex-col w-max justify-center items-center"
         >
-          <div className="flex justify-center items-center w-max p-4 gap-6 md:gap-10">
+          <div className="flex justify-center items-center p-4 gap-6 md:gap-10">
             <SkillCard src={html} skill="HTML" w="w-8  md:w-14" />
             <SkillCard src={css} skill="CSS" w="w-8 mb-1 md:w-14" />
             <SkillCard src={js} skill="JAVASCRIPT" w="w-10  md:w-16" />

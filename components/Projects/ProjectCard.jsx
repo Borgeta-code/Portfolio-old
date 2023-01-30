@@ -19,11 +19,8 @@ export function ProjectCard(props) {
         </h1>
 
         <span className="text-gray text-sm">
-          Aplicação web desenvolvida com {""}
-          <span className="text-roxo text-sm font-bold">
-            {props.description}
-          </span>
-          .
+          {props.description}, tecnologias:
+          <span className="text-roxo text-sm font-bold"> {props.techs}</span>.
         </span>
 
         <div className="flex gap-4">
