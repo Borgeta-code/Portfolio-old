@@ -98,7 +98,7 @@ export function Projects() {
           onClick={scrollPrev}
           enabled={nextBtnEnabled}
         >
-          <Image src={left} alt="Esquerda" className="w-14" />
+          <Image src={left} alt="Esquerda" className="w-14" draggable="false" />
         </button>
         <button
           className={
@@ -109,7 +109,7 @@ export function Projects() {
           onClick={scrollNext}
           enabled={prevBtnEnabled}
         >
-          <Image src={right} alt="Direita" className="w-14" />
+          <Image src={right} alt="Direita" className="w-14" draggable="false" />
         </button>
 
         <div className="hidden justify-center items-center gap-2 absolute bottom-10 btnEmblaDesktop">

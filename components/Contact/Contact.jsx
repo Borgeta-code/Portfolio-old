@@ -176,12 +176,25 @@ export function Contact() {
         </motion.div>
       </div>
 
-      <div
+      <motion.div
         onClick={smoothScrollTo}
-        className="cursor-pointer absolute bottom-6 right-5 flex justify-center items-center "
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 80,
+          damping: 20,
+          delay: 1.7,
+        }}
+        className="cursor-pointer absolute bottom-6 right-5 flex flex-col justify-center items-center "
       >
-        <Image src={UpArrow} alt="Voltar ao começo" className="w-12" />
-      </div>
+        <Image
+          src={UpArrow}
+          alt="Voltar ao começo"
+          className="w-12"
+          draggable="false"
+        />
+      </motion.div>
     </section>
   );
 }

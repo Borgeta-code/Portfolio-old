@@ -1,10 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Form } from "../components/Contact/Form";
 import Head from "next/head";
 import airplane from "../public/img/airplane.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { Form } from "../components/Contact/Form";
-import { motion } from "framer-motion";
+import Back from "../public/img/BackArrow.svg";
 
 export default function contato() {
   return (
@@ -16,26 +17,8 @@ export default function contato() {
       </Head>
 
       <main className="flex justify-center items-center h-screen relative">
-        <motion.h1
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 120,
-            damping: 20,
-            staggerChildren: 0.3,
-          }}
-          className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
-        >
-          <span className="text-roxo text-2xl font-bold"> | </span>
-          Contato
-        </motion.h1>
-
-        <Link
-          href="/"
-          className="text-roxo text-base font-medium uppercase absolute top-14 left-4"
-        >
-          ← voltar
+        <Link href="/" className="text-roxo absolute top-5 left-4">
+          <Image src={Back} className="w-16" draggable="false" alt="Voltar" />
         </Link>
 
         <div className="flex flex-col justify-center items-center p-3">
@@ -53,7 +36,7 @@ export default function contato() {
             <Image
               src={airplane}
               id="color"
-              className="w-12 md:w-14"
+              className="w-12"
               draggable="false"
               alt="airplane"
             />

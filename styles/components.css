@@ -131,6 +131,23 @@
   min-width: 0;
 }
 
+.Navbar {
+  width: 80vw;
+}
+
+.SectionTitle {
+  left: 100px;
+}
+
+*::selection {
+  background: #8800f0;
+  color: rgba(255, 255, 255);
+}
+::-moz-selection {
+  background: #8800f0;
+  color: rgba(255, 255, 255);
+}
+
 @media (max-width: 430px) {
   #project {
     width: 95vw;
@@ -195,12 +212,4 @@
   #containerInput {
     min-width: 40vw;
   }
-}
-
-.Navbar {
-  width: 80vw;
-}
-
-.SectionTitle {
-  left: 100px;
 }
