@@ -5,7 +5,7 @@ export const DotButton = (props) => {
 
   return (
     <button
-      className={"w-3 h-3 bg-roxo rounded-full ".concat(
+      className={"w-3 h-3 bg-home border-2 border-roxo rounded-full ".concat(
         selected ? "opacity-100" : "opacity-30"
       )}
       type="button"

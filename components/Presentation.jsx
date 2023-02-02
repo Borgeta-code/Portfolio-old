@@ -5,7 +5,10 @@ import { NavBar } from "./navBar";
 
 export function Presentation() {
   return (
-    <section className="flex items-center justify-center h-screen relative">
+    <section
+      id="Start"
+      className="flex items-center justify-center h-screen relative"
+    >
       <NavBar />
 
       <div className="flex flex-col justify-center font-bold p-5 sm:p-2 md:p-0">

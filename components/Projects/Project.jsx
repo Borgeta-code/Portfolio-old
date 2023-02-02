@@ -2,11 +2,13 @@ import React, { useCallback, useState, useEffect } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { motion } from "framer-motion";
 import { DotButton } from "./dot";
-import toast, { Toaster } from "react-hot-toast";
 import useEmblaCarousel from "embla-carousel-react";
 import Transimple from "../../public/img/Transimple.svg";
 import Qrmaker from "../../public/img/QrMaker.svg";
 import asr from "../../public/img/asr.svg";
+import Image from "next/image";
+import right from "../../public/img/rigthArrow.svg";
+import left from "../../public/img/leftArrow.svg";
 
 export function Projects() {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -62,7 +64,7 @@ export function Projects() {
           projetos
         </motion.h1>
 
-        {/* mobile menu */}
+        {/* mobile dots */}
 
         <motion.div
           initial={{ scale: 0 }}
@@ -73,20 +75,8 @@ export function Projects() {
             damping: 20,
             staggerChildren: 0.3,
           }}
-          className="hidden justify-between w-[95vw] items-center btnEmblaMobile"
+          className="hidden justify-center mb-3 items-center btnEmblaMobile"
         >
-          <button
-            className={
-              prevBtnEnabled
-                ? "text-roxo text-3xl"
-                : "text-roxo text-3xl opacity-20"
-            }
-            onClick={scrollPrev}
-            enabled={prevBtnEnabled}
-          >
-            ❮
-          </button>
-
           <div className="flex justify-center items-center gap-2">
             {scrollSnaps.map((_, index) => (
               <DotButton
@@ -96,43 +86,41 @@ export function Projects() {
               />
             ))}
           </div>
-
-          <button
-            className={
-              nextBtnEnabled
-                ? "text-roxo text-3xl"
-                : "text-roxo text-3xl opacity-20 "
-            }
-            onClick={scrollNext}
-            enabled={nextBtnEnabled}
-          >
-            ❯
-          </button>
         </motion.div>
 
         {/* desktop menu */}
         <button
           className={
             prevBtnEnabled
-              ? "text-roxo text-5xl z-50 absolute left-3 hidden btnEmblaDesktop"
-              : "text-roxo text-5xl opacity-20 z-50 absolute left-3 hidden btnEmblaDesktop"
+              ? "absolute left-3 z-50 hidden btnEmblaDesktop"
+              : "opacity-20 absolute left-3 z-50 hidden btnEmblaDesktop"
           }
           onClick={scrollPrev}
           enabled={nextBtnEnabled}
         >
-          ❮
+          <Image src={left} alt="Esquerda" className="w-14" />
         </button>
         <button
           className={
             nextBtnEnabled
-              ? "text-roxo text-5xl absolute right-3 z-50 hidden btnEmblaDesktop"
-              : "text-roxo text-5xl opacity-20 absolute right-3 z-50 hidden btnEmblaDesktop"
+              ? "absolute right-3 z-50 hidden btnEmblaDesktop"
+              : "opacity-20 absolute right-3 z-50 hidden btnEmblaDesktop"
           }
           onClick={scrollNext}
           enabled={prevBtnEnabled}
         >
-          ❯
+          <Image src={right} alt="Direita" className="w-14" />
         </button>
+
+        <div className="hidden justify-center items-center gap-2 absolute bottom-10 btnEmblaDesktop">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              selected={index === selectedIndex}
+              onClick={() => scrollTo(index)}
+            />
+          ))}
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -149,17 +137,8 @@ export function Projects() {
             <div className="embla__container">
               <div className="embla__slide">
                 <ProjectCard
-                  name="A.S.R"
-                  description="Aplicação Web completa desenvolvida para Trabalho de Conclusão de Curso, nela é possivel fazer Agendamentos de Salas e Recursos na instituição"
-                  techs="Laravel, Javascript, FullCalendar, Bootstrap e MySQL"
-                  src={asr}
-                  git="https://github.com/Borgeta-code/Transimple"
-                />
-              </div>
-              <div className="embla__slide">
-                <ProjectCard
                   name="Transimple"
-                  description="Aplicação Web simples, nela é possivel traduzir de qualquer língua a uma lingua desejada"
+                  description="Aplicação Web, nela é possivel traduzir de qualquer língua a uma lingua desejada"
                   techs="Nextjs, TailwindCSS, FramerMotion e RapidAPI"
                   src={Transimple}
                   demo="https://transimple.vercel.app/"
@@ -169,7 +148,7 @@ export function Projects() {
               <div className="embla__slide">
                 <ProjectCard
                   name="QrMaker"
-                  description="Aplicação Web simples, nela você pode gerar um Qrcode funcional e baixá lo"
+                  description="Aplicação Web, nela você pode gerar um Qrcode funcional e baixá lo"
                   techs="Nextjs, TailwindCSS e QrCode API"
                   src={Qrmaker}
                   demo="https://qrmaker.vercel.app/"
@@ -179,18 +158,6 @@ export function Projects() {
             </div>
           </div>
         </motion.div>
-
-        {/* dots desktop */}
-
-        <div className="hidden justify-center items-center gap-2 absolute bottom-10 btnEmblaDesktop">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              selected={index === selectedIndex}
-              onClick={() => scrollTo(index)}
-            />
-          ))}
-        </div>
       </section>
     </>
   );

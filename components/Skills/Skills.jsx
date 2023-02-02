@@ -51,31 +51,31 @@ export function Skills() {
           whileInView="visible"
           className="flex flex-col w-max justify-center items-center"
         >
-          <div className="flex justify-center items-center p-4 gap-6 md:gap-10">
-            <SkillCard src={html} skill="HTML" w="w-8  md:w-14" />
-            <SkillCard src={css} skill="CSS" w="w-8 mb-1 md:w-14" />
-            <SkillCard src={js} skill="JAVASCRIPT" w="w-10  md:w-16" />
-            <SkillCard src={php} skill="PHP" w="w-12 mb-1 md:w-20 md:mb-2" />
-            <SkillCard src={react} skill="REACT" w="w-12  md:w-20" />
+          <div className="flex justify-center items-center p-4 gap-6 sm:gap-10">
+            <SkillCard src={html} skill="HTML" w="w-8  sm:w-14" />
+            <SkillCard src={css} skill="CSS" w="w-8 mb-1 sm:w-14" />
+            <SkillCard src={js} skill="JAVASCRIPT" w="w-10  sm:w-16" />
+            <SkillCard src={php} skill="PHP" w="w-12 mb-1 sm:w-20 sm:mb-2" />
+            <SkillCard src={react} skill="REACT" w="w-12  sm:w-20" />
           </div>
 
-          <div className="flex justify-center items-center w-max p-4 gap-4 md:gap-6">
-            <SkillCard src={next} skill="NEXT" w="w-8 mb-1 md:w-16 md:mb-3" />
+          <div className="flex justify-center items-center w-max p-4 gap-4 sm:gap-6">
+            <SkillCard src={next} skill="NEXT" w="w-8 mb-1 sm:w-16 sm:mb-3" />
             <SkillCard
               src={laravel}
               skill="LARAVEL"
-              w="w-12  md:w-24 md:mb-2"
+              w="w-12  sm:w-24 sm:mb-2"
             />
-            <SkillCard src={boot} skill="BOOTSTRAP" w="w-12  md:w-24 md:mb-2" />
+            <SkillCard src={boot} skill="BOOTSTRAP" w="w-12  sm:w-24 sm:mb-2" />
             <SkillCard
               src={tailwind}
               skill="TAILWIND"
-              w="w-12  md:w-24 md:mb-2"
+              w="w-12  sm:w-24 sm:mb-2"
             />
             <SkillCard
               src={git}
               skill="GITHUB"
-              w="w-8 mb-0.5 md:w-16 md:mb-3"
+              w="w-8 mb-0.5 sm:w-16 sm:mb-3"
             />
           </div>
         </motion.ul>

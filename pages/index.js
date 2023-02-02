@@ -11,16 +11,16 @@ import { Contact } from "../components/Contact/Contact";
 import { motion, useScroll } from "framer-motion";
 
 export default function Home() {
-  // const scrollRef = useRef(null);
-  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 100 });
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
 
   const { scrollYProgress } = useScroll();
 
   return (
     <div>
       <Head>
-        <title>Portfolio - Matheus Borges</title>
-        <meta name="description" content="Portfolio Matheus Borges Dev" />
+        <title>Matheus Borges | Portfólio</title>
+        <meta name="description" content="Portfolio Matheus Borges" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -29,11 +29,10 @@ export default function Home() {
         style={{ scaleX: scrollYProgress }}
       />
 
-      <main className="relative">
+      <main className="relative" ref={scrollRef}>
         <Presentation />
         <Projects />
         <Skills />
-        R
         <Education />
         {/* <Certificates /> */}
         <Contact />

@@ -1,9 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Form } from "./Form";
 import airplane from "../../public/img/airplane.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { Form } from "./Form";
-import { motion } from "framer-motion";
+import UpArrow from "../../public/img/upArrow.svg";
 
 export function Contact() {
   const container = {
@@ -24,6 +25,15 @@ export function Contact() {
       x: 0,
       opacity: 1,
     },
+  };
+
+  const smoothScrollTo = (e) => {
+    e.preventDefault();
+    const element = document.getElementById("Start");
+    element.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -164,6 +174,13 @@ export function Contact() {
         >
           <Form />
         </motion.div>
+      </div>
+
+      <div
+        onClick={smoothScrollTo}
+        className="cursor-pointer absolute bottom-6 right-5 flex justify-center items-center "
+      >
+        <Image src={UpArrow} alt="Voltar ao começo" className="w-12" />
       </div>
     </section>
   );

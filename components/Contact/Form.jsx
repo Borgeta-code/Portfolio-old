@@ -31,7 +31,7 @@ export function Form() {
       setNome("");
       setMail("");
       setMessage("");
-      toast.success("Agradeço sua mensagem!", {
+      toast.success("Mensagem enviada!", {
         style: {
           background: "#000012",
           color: "#f7f7f7",
@@ -63,7 +63,7 @@ export function Form() {
 
   return (
     <div className="flex justify-center items-center">
-      <Toaster position="bottom-right" />
+      <Toaster position="bottom-left" />
       <form
         onSubmit={handleSubmit}
         className="flex w-max flex-col justify-center items-center md:p-3"

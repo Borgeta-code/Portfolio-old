@@ -1,6 +1,3 @@
-import Image from "next/image";
-import logo from "../public/img/logo.svg";
-
 export function NavBar() {
   const smoothScrollTo = (e) => {
     e.preventDefault();
