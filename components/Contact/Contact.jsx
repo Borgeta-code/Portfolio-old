@@ -64,10 +64,10 @@ export function Contact() {
           >
             <span className="text-gray text-lg">
               <span className="text-roxo text-2xl font-bold"> | </span>
-              Fale comigo
+              Envie uma mensagem
             </span>
             <Link href="/contact">
-              <span className="text-roxo text-base mt-1">Enviar mensagem</span>
+              <span className="text-roxo text-base mt-1">Clique aqui</span>
             </Link>
           </motion.li>
 
@@ -94,7 +94,7 @@ export function Contact() {
             </span>
 
             <span className="text-gray text-base opacity-60 mt-1">
-              (11) 957943978
+              (11) 95794-3978
             </span>
           </motion.li>
 
@@ -107,7 +107,7 @@ export function Contact() {
               Linkedin
             </span>
 
-            <span className="text-gray text-base opacity-60 mt-1">
+            <span className="text-roxo text-base mt-1">
               <a
                 href="https://linkedin.com/in/matheus-borges-coder"
                 target="_blank"
@@ -127,7 +127,7 @@ export function Contact() {
               Github
             </span>
 
-            <span className="text-gray text-base opacity-60 mt-1">
+            <span className="text-roxo text-base mt-1">
               <a
                 href="https://github.com/Borgeta-code"
                 target="_blank"
@@ -191,7 +191,7 @@ export function Contact() {
         <Image
           src={UpArrow}
           alt="Voltar ao começo"
-          className="w-12"
+          className="w-10"
           draggable="false"
         />
       </motion.div>

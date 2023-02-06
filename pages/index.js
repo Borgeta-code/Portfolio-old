@@ -1,7 +1,6 @@
 import Head from "next/head";
 import useScrollSnap from "react-use-scroll-snap";
 import React, { useRef } from "react";
-import { NavBar } from "../components/navBar";
 import { Presentation } from "../components/Presentation";
 import { Projects } from "../components/Projects/Project";
 import { Skills } from "../components/Skills/Skills";
@@ -34,7 +33,6 @@ export default function Home() {
         <Projects />
         <Skills />
         <Education />
-        {/* <Certificates /> */}
         <Contact />
       </main>
     </div>

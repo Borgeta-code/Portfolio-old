@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function ProjectCard(props) {
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
       <Image
         src={props.src}
         id="project"
@@ -24,14 +24,18 @@ export function ProjectCard(props) {
         </span>
 
         <div className="flex gap-4">
-          <a
-            className="text-gray text-sm border-b-2 border-b-roxo "
-            target="_blank"
-            rel="noopener noreferrer"
-            href={props.demo}
-          >
-            Demo
-          </a>
+          {props.demo ? (
+            <a
+              className="text-gray text-sm border-b-2 border-b-roxo "
+              target="_blank"
+              rel="noopener noreferrer"
+              href={props.demo}
+            >
+              Demo
+            </a>
+          ) : (
+            ""
+          )}
           <a
             className="text-gray text-sm border-b-2 border-b-roxo"
             target="_blank"

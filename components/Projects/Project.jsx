@@ -5,10 +5,11 @@ import { DotButton } from "./dot";
 import useEmblaCarousel from "embla-carousel-react";
 import Transimple from "../../public/img/Transimple.svg";
 import Qrmaker from "../../public/img/QrMaker.svg";
-import asr from "../../public/img/asr.svg";
+import asr from "../../public/img/asr.jpg";
 import Image from "next/image";
 import right from "../../public/img/rigthArrow.svg";
 import left from "../../public/img/leftArrow.svg";
+import Slide from "../../public/img/Slide.svg";
 
 export function Projects() {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -135,28 +136,44 @@ export function Projects() {
         >
           <div className="embla__viewport" ref={emblaRef}>
             <div className="embla__container">
-              <div className="embla__slide">
+              <div className="embla__slide ">
                 <ProjectCard
-                  name="Transimple"
-                  description="Aplicação Web, nela é possivel traduzir de qualquer língua a uma lingua desejada"
-                  techs="Nextjs, TailwindCSS, FramerMotion e RapidAPI"
-                  src={Transimple}
-                  demo="https://transimple.vercel.app/"
-                  git="https://github.com/Borgeta-code/Transimple"
+                  name="A.S.R"
+                  description="Aplicação Web desenvolvida para Trabalho de Conclusão de Curso onde é possivel fazer Agendamentos de Salas e Recursos na instituição"
+                  techs="Laravel, Javascript, FullCalendar, Bootstrap e MySQL"
+                  src={asr}
+                  git="https://github.com/Borgeta-code/Agendamento-de-Salas-e-Recursos"
                 />
               </div>
               <div className="embla__slide">
                 <ProjectCard
                   name="QrMaker"
-                  description="Aplicação Web, nela você pode gerar um Qrcode funcional e baixá lo"
+                  description="Aplicação web onde é possível gerar um QRCode funcional e baixá-lo."
                   techs="Nextjs, TailwindCSS e QrCode API"
                   src={Qrmaker}
                   demo="https://qrmaker.vercel.app/"
                   git="https://github.com/Borgeta-code/QrMaker"
                 />
               </div>
+              <div className="embla__slide">
+                <ProjectCard
+                  name="Transimple"
+                  description="Aplicação web onde é possível fazer traduções para alguns idiomas com rapidez e eficiência."
+                  techs="Nextjs, TailwindCSS, FramerMotion e RapidAPI"
+                  src={Transimple}
+                  demo="https://transimple.vercel.app/"
+                  git="https://github.com/Borgeta-code/Transimple"
+                />
+              </div>
             </div>
           </div>
+
+          <Image
+            src={Slide}
+            alt="Deslize"
+            className="w-20 absolute bottom-3 right-3 hidden btnEmblaMobile"
+            draggable="false"
+          />
         </motion.div>
       </section>
     </>
