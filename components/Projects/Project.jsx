@@ -142,7 +142,7 @@ export function Projects() {
                   description="Aplicação Web desenvolvida para Trabalho de Conclusão de Curso onde é possivel fazer Agendamentos de Salas e Recursos na instituição"
                   techs="Laravel, Javascript, FullCalendar, Bootstrap e MySQL"
                   src={asr}
-                  git="https://github.com/Borgeta-code/Agendamento-de-Salas-e-Recursos"
+                  git="https://github.com/Borgeta-code/Agendamento-de-Salas-e-Recursos---ASR"
                 />
               </div>
               <div className="embla__slide">
