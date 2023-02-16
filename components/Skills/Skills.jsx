@@ -13,6 +13,7 @@ import next from "../../public/img/next-js.svg";
 import boot from "../../public/img/bootstrap.svg";
 import typescript from "../../public/img/typescript.svg";
 import sql from "../../public/img/mysql.svg";
+import nodejs from "../../public/img/nodejs.svg";
 
 export function Skills() {
   const container = {
@@ -41,7 +42,7 @@ export function Skills() {
         className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
       >
         <span className="text-roxo text-2xl font-bold"> | </span>
-        Habilidades
+        Tecnologias
       </motion.h1>
 
       <div className="flex justify-center items-center ">
@@ -77,6 +78,16 @@ export function Skills() {
               skill="GITHUB"
               w="w-8 mb-0.5 sm:w-16 sm:mb-3"
             />
+          </div>
+
+          <div className="flex justify-center items-center p-4 gap-6 sm:gap-10">
+            <SkillCard src={sql} skill="MYSQL" w="w-8  sm:w-14" />
+            <SkillCard
+              src={typescript}
+              skill="TYPESCRIPT"
+              w="w-8 mb-1 sm:w-14"
+            />
+            <SkillCard src={nodejs} skill="NODEJS" w="w-10 sm:w-16" />
           </div>
         </motion.ul>
       </div>

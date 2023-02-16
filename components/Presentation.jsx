@@ -55,7 +55,7 @@ export function Presentation() {
               onInit={(typewriter) => {
                 typewriter
                   .pauseFor(1700)
-                  .typeString("< Front-end Dev />")
+                  .typeString("< Fullstack Dev />")
                   .start();
               }}
             />
