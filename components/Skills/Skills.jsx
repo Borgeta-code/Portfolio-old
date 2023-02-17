@@ -10,7 +10,7 @@ import js from "../../public/img/js.svg";
 import laravel from "../../public/img/laravel.svg";
 import tailwind from "../../public/img/tailwindcss.svg";
 import next from "../../public/img/next-js.svg";
-import boot from "../../public/img/bootstrap.svg";
+import angular from "../../public/img/angular.svg";
 import typescript from "../../public/img/typescript.svg";
 import sql from "../../public/img/mysql.svg";
 import nodejs from "../../public/img/nodejs.svg";
@@ -41,7 +41,7 @@ export function Skills() {
         }}
         className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
       >
-        <span className="text-roxo text-2xl font-bold"> | </span>
+        <span className="text-roxo text-2xl font-bold  "> | </span>
         Tecnologias
       </motion.h1>
 
@@ -50,7 +50,7 @@ export function Skills() {
           variants={container}
           initial="hidden"
           whileInView="visible"
-          className="flex flex-col w-max justify-center items-center"
+          className="flex flex-col w-max justify-center items-center gap-1"
         >
           <div className="flex justify-center items-center p-4 gap-6 sm:gap-10">
             <SkillCard src={html} skill="HTML" w="w-8  sm:w-14" />
@@ -67,7 +67,7 @@ export function Skills() {
               skill="LARAVEL"
               w="w-12  sm:w-24 sm:mb-2"
             />
-            <SkillCard src={boot} skill="BOOTSTRAP" w="w-12  sm:w-24 sm:mb-2" />
+            <SkillCard src={angular} skill="ANGULAR" w="w-10  sm:w-20" />
             <SkillCard
               src={tailwind}
               skill="TAILWIND"
@@ -81,13 +81,13 @@ export function Skills() {
           </div>
 
           <div className="flex justify-center items-center p-4 gap-6 sm:gap-10">
-            <SkillCard src={sql} skill="MYSQL" w="w-8  sm:w-14" />
+            <SkillCard src={sql} skill="MYSQL" w="w-10 sm:mb-1 sm:w-[70px]" />
             <SkillCard
               src={typescript}
               skill="TYPESCRIPT"
-              w="w-8 mb-1 sm:w-14"
+              w="w-8 mb-2 sm:mb-3 sm:w-16"
             />
-            <SkillCard src={nodejs} skill="NODEJS" w="w-10 sm:w-16" />
+            <SkillCard src={nodejs} skill="NODEJS" w="w-10 sm:w-20" />
           </div>
         </motion.ul>
       </div>

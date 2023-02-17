@@ -15,7 +15,7 @@ export function SkillCard(props) {
     <div>
       <motion.li
         variants={item}
-        className="flex flex-col justify-center items-center mt-2 mb-2"
+        className="flex flex-col justify-center items-center"
       >
         <Image
           id="color"
