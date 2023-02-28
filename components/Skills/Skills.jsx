@@ -67,7 +67,7 @@ export function Skills() {
               skill="LARAVEL"
               w="w-12  sm:w-24 sm:mb-2"
             />
-            <SkillCard src={angular} skill="ANGULAR" w="w-10  sm:w-20" />
+            <SkillCard src={sql} skill="MYSQL" w="w-10 sm:mb-1 sm:w-[70px]" />
             <SkillCard
               src={tailwind}
               skill="TAILWIND"
@@ -81,7 +81,6 @@ export function Skills() {
           </div>
 
           <div className="flex justify-center items-center p-4 gap-6 sm:gap-10">
-            <SkillCard src={sql} skill="MYSQL" w="w-10 sm:mb-1 sm:w-[70px]" />
             <SkillCard
               src={typescript}
               skill="TYPESCRIPT"

@@ -38,7 +38,7 @@ export function Education() {
         className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
       >
         <span className="text-roxo text-2xl font-bold"> | </span>
-        Formação
+        Formação acadêmica
       </motion.h1>
 
       <motion.ul
@@ -60,7 +60,7 @@ export function Education() {
             Universidade Cruzeiro do Sul
           </span>
           <span className="text-roxo font-bold text-sm md:text-base mt-2">
-            2023 - 2024
+            2023 - 2024 <span className="opacity-70">• Em andamento</span>
           </span>
         </motion.li>
 

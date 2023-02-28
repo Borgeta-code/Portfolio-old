@@ -5,7 +5,7 @@ import { DotButton } from "./dot";
 import useEmblaCarousel from "embla-carousel-react";
 import Transimple from "../../public/img/Transimple.svg";
 import Qrmaker from "../../public/img/QrMaker.svg";
-import asr from "../../public/img/asr.jpg";
+import asr from "../../public/img/asr.svg";
 import Image from "next/image";
 import right from "../../public/img/rigthArrow.svg";
 import left from "../../public/img/leftArrow.svg";
@@ -139,7 +139,7 @@ export function Projects() {
               <div className="embla__slide ">
                 <ProjectCard
                   name="A.S.R"
-                  description="Aplicação Web desenvolvida para Trabalho de Conclusão de Curso onde é possivel fazer Agendamentos de Salas e Recursos na instituição"
+                  description="Aplicação Web desenvolvida para Trabalho de Conclusão de Curso onde os professores agendam Recursos e horários nas Salas da instituição"
                   techs="Laravel, Javascript, FullCalendar, Bootstrap e MySQL"
                   src={asr}
                   git="https://github.com/Borgeta-code/Agendamento-de-Salas-e-Recursos---ASR"
@@ -148,7 +148,7 @@ export function Projects() {
               <div className="embla__slide">
                 <ProjectCard
                   name="QrMaker"
-                  description="Aplicação web onde é possível gerar um QRCode funcional e baixá-lo."
+                  description="Aplicação web onde é possível gerar um QRCode funcional e baixá-lo"
                   techs="Nextjs, TailwindCSS e QrCode API"
                   src={Qrmaker}
                   demo="https://qrmaker.vercel.app/"
@@ -158,7 +158,7 @@ export function Projects() {
               <div className="embla__slide">
                 <ProjectCard
                   name="Transimple"
-                  description="Aplicação web onde é possível fazer traduções para alguns idiomas com rapidez e eficiência."
+                  description="Aplicação web onde é possível fazer traduções para alguns idiomas com rapidez e eficiência"
                   techs="Nextjs, TailwindCSS, FramerMotion e RapidAPI"
                   src={Transimple}
                   demo="https://transimple.vercel.app/"
