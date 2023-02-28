@@ -139,7 +139,7 @@ export function Projects() {
               <div className="embla__slide ">
                 <ProjectCard
                   name="A.S.R"
-                  description="Aplicação Web desenvolvida para Trabalho de Conclusão de Curso onde os professores agendam Recursos e horários nas Salas da instituição"
+                  description="Aplicação web desenvolvida para TCC que permite aos professores agendar recursos e horários nas salas da instituição"
                   techs="Laravel, Javascript, FullCalendar, Bootstrap e MySQL"
                   src={asr}
                   git="https://github.com/Borgeta-code/Agendamento-de-Salas-e-Recursos---ASR"
