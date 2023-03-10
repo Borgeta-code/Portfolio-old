@@ -85,7 +85,7 @@ export function Form() {
           />
         </div>
         <div id="containerInput" className="flex justify-center mb-4">
-          <label>Menssagem</label>
+          <label>Mensagem</label>
           <textarea
             value={message}
             onChange={({ target }) => setMessage(target.value)}
