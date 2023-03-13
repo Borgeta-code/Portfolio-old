@@ -6,6 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Transimple from "../../public/img/Transimple.svg";
 import Qrmaker from "../../public/img/QrMaker.svg";
 import asr from "../../public/img/asr.svg";
+import weather from "../../public/img/Weathermate.svg";
 import Image from "next/image";
 import right from "../../public/img/rigthArrow.svg";
 import left from "../../public/img/leftArrow.svg";
@@ -143,6 +144,16 @@ export function Projects() {
                   techs="Laravel, Javascript, FullCalendar, Bootstrap e MySQL"
                   src={asr}
                   git="https://github.com/Borgeta-code/Agendamento-de-Salas-e-Recursos---ASR"
+                />
+              </div>
+              <div className="embla__slide ">
+                <ProjectCard
+                  name="WeatherMate"
+                  description="Aplicação web que permite aos usuários escolher uma cidade e exibe informações sobre o clima"
+                  techs="Nextjs, TailwindCSS e Open Weather API"
+                  src={weather}
+                  demo="https://weathermateapp.vercel.app/"
+                  git="https://github.com/Borgeta-code/WeatherMate"
                 />
               </div>
               <div className="embla__slide">
