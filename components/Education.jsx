@@ -61,7 +61,11 @@ export function Education() {
             Universidade Cruzeiro do Sul
           </span>
           <span className="text-roxo font-bold text-sm md:text-base mt-2 flex gap-1">
-            2023 - 2024 <span className="opacity-50 flex gap-1">• Em andamento  <Image src={time} alt="Pequeno relógio" className="w-[18px]" /></span>
+            2023 - 2024{" "}
+            <span className="opacity-80 flex gap-1">
+              • Em andamento{" "}
+              <Image src={time} alt="Pequeno relógio" className="w-[18px]" />
+            </span>
           </span>
         </motion.li>
 
