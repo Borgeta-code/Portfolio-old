@@ -10,7 +10,6 @@
     "openmobile": "node ./node_modules/openmobile/ip.js"
   },
   "dependencies": {
-    "@next/font": "^13.0.3",
     "axios": "^1.2.1",
     "embla-carousel-react": "^7.0.5",
     "eslint": "8.27.0",

@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "../styles/components.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
