@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import education from "../public/img/education.svg";
+import time from "../public/img/Time.svg";
 import { motion } from "framer-motion";
 
 export function Education() {
@@ -59,8 +60,8 @@ export function Education() {
           <span className="text-gray text-base opacity-60 mt-2">
             Universidade Cruzeiro do Sul
           </span>
-          <span className="text-roxo font-bold text-sm md:text-base mt-2">
-            2023 - 2024 <span className="opacity-70">• Em andamento</span>
+          <span className="text-roxo font-bold text-sm md:text-base mt-2 flex gap-1">
+            2023 - 2024 <span className="opacity-50 flex gap-1">• Em andamento  <Image src={time} alt="Pequeno relógio" className="w-[18px]" /></span>
           </span>
         </motion.li>
 
