@@ -8,10 +8,10 @@
 #containerInput input {
   width: 40vw;
   height: 50px;
-  padding: 10px;
+  padding: 10px 20px;
   outline: 0;
   border: 2px solid #8600f0;
-  border-radius: 4px;
+  border-radius: 10px;
   background: transparent;
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 16px;
@@ -22,10 +22,10 @@
   width: 40vw;
   height: 150px;
   resize: none;
-  padding: 10px;
+  padding: 10px 20px;
   outline: 0;
   border: 2px solid #8600f0;
-  border-radius: 4px;
+  border-radius: 10px;
   background: transparent;
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 16px;
@@ -33,15 +33,7 @@
 }
 
 #containerInput textarea::-webkit-scrollbar {
-  width: 2px;
-}
-
-#containerInput textarea::-webkit-scrollbar-track {
-  background: #000012;
-}
-
-#containerInput textarea::-webkit-scrollbar-thumb {
-  background-color: #7000c5;
+  width: 0px;
 }
 
 #containerInput label {
@@ -52,7 +44,7 @@
   background-color: #000012;
   pointer-events: none;
   position: absolute;
-  left: 13px;
+  left: 30px;
   top: -10px;
 }
 
@@ -84,7 +76,7 @@
 }
 
 #allsides-2:hover {
-  --d: 100%;
+  --d: 60%;
 }
 
 .Typewriter__cursor {
@@ -186,7 +178,6 @@
   }
 }
 
-
 @media (max-width: 1023px) {
   .btnEmblaMobile {
     display: flex;
@@ -194,7 +185,6 @@
 }
 
 @media (max-width: 1024px) {
-
   .embla__slide {
     margin-right: 20px;
   }

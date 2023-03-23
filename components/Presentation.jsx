@@ -35,7 +35,7 @@ export function Presentation() {
             delay: 0.5,
           }}
         >
-          <h1 className="text-gray text-7xl mb-3 mt-3 ">
+          <h1 className="text-gray text-7xl mb-4 mt-3 ">
             Matheus Borges<span className="text-roxo">.</span>
           </h1>
         </motion.div>
@@ -50,12 +50,12 @@ export function Presentation() {
             delay: 0.8,
           }}
         >
-          <span className="text-roxo text-3xl md:text-4xl gap-2">
+          <span className="text-roxo text-2xl md:text-4xl gap-2">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
                   .pauseFor(1700)
-                  .typeString("Fullstack Developer")
+                  .typeString("Web Fullstack Developer")
                   .start();
               }}
             />
