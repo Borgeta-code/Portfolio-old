@@ -49,7 +49,7 @@ export default function contato() {
               type: "spring",
               stiffness: 80,
               damping: 20,
-              delay: 1.7,
+              delay: 1.5,
             }}
             className="flex justify-center items-center mt-2"
           >

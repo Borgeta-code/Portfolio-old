@@ -11,23 +11,22 @@ export function Presentation() {
     >
       <NavBar />
 
-      <div className="flex flex-col justify-center font-bold p-5 sm:p-2 md:p-0">
+      <div className="flex flex-col justify-center font-bold p-4 sm:p-2 md:p-0">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             type: "spring",
             stiffness: 120,
             damping: 20,
-            staggerChildren: 0.3,
           }}
         >
-          <h3 className="text-roxo text-xl md:text-xl">Olá, meu nome é</h3>
+          <span className="text-roxo text-xl md:text-xl">Olá, meu nome é</span>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             type: "spring",
             stiffness: 120,
@@ -41,8 +40,8 @@ export function Presentation() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             type: "spring",
             stiffness: 120,
@@ -50,12 +49,12 @@ export function Presentation() {
             delay: 0.8,
           }}
         >
-          <span className="text-roxo text-2xl md:text-4xl gap-2">
+          <span className="text-roxo text-2xl md:text-4xl gap-2 flex">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .pauseFor(1700)
-                  .typeString("Web Fullstack Developer")
+                  .pauseFor(1200)
+                  .typeString("Desenvolvedor Fullstack")
                   .start();
               }}
             />

@@ -1,10 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Form } from "./Form";
+import toast from "react-hot-toast";
 import airplane from "../../public/img/airplane.svg";
 import Image from "next/image";
 import Link from "next/link";
 import UpArrow from "../../public/img/upArrow.svg";
+import gmail from "../../public/img/gmail.svg";
+import whatsapp from "../../public/img/whats.svg";
+import linkedin from "../../public/img/linkedin.svg";
+import git from "../../public/img/githubSocial.svg";
+import copy from "../../public/img/copy.svg";
+import message from "../../public/img/message.svg";
 
 export function Contact() {
   const container = {
@@ -36,6 +43,37 @@ export function Contact() {
     });
   };
 
+  const copyTo = async () => {
+    const email = "matheusborgescode@gmail.com";
+
+    const tempElement = document.createElement("textarea");
+    tempElement.value = email;
+
+    tempElement.style.position = "absolute";
+    tempElement.style.left = "-9999px";
+
+    document.body.appendChild(tempElement);
+
+    tempElement.select();
+
+    document.execCommand("copy");
+
+    document.body.removeChild(tempElement);
+
+    toast.success("Email copiado!", {
+      style: {
+        background: "#000012",
+        color: "#f7f7f7",
+        border: "2px solid #8800f0",
+      },
+      iconTheme: {
+        primary: "#8800f0",
+        secondary: "#ffffff",
+      },
+    });
+    return;
+  };
+
   return (
     <section
       id="contact"
@@ -57,17 +95,25 @@ export function Contact() {
       </motion.h1>
 
       <motion.ul variants={container} initial="hidden" whileInView="visible">
-        <div className="flex flex-col justify-center items-start gap-5">
+        <div className="flex flex-col justify-center items-start gap-[30px]">
           <motion.li
             variants={item}
             className="hidden flex-col justify-center items-start sendMessage"
           >
-            <span className="text-gray text-lg">
-              <span className="text-roxo text-2xl font-bold"> | </span>
-              Envie uma mensagem
-            </span>
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-gray text-base uppercase">
+                <span className="text-roxo text-xl font-bold"> | </span>
+                Mensagem
+              </span>
+              <Image
+                src={message}
+                className="w-6"
+                draggable="false"
+                alt="message"
+              />
+            </div>
             <Link href="/contact">
-              <span className="text-roxo text-base mt-1">Clique aqui</span>
+              <span className="text-roxo text-base mt-1">Entre em contato</span>
             </Link>
           </motion.li>
 
@@ -75,45 +121,56 @@ export function Contact() {
             variants={item}
             className="flex flex-col justify-center items-start"
           >
-            <span className="text-gray text-lg">
-              <span className="text-roxo text-2xl font-bold"> | </span>
-              Email
-            </span>
-            <span className="text-gray text-base opacity-60 mt-1">
-              matheusborgescode@gmail.com
-            </span>
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-gray text-base uppercase">
+                <span className="text-roxo text-xl font-bold"> | </span>
+                Email
+              </span>
+              <Image
+                src={gmail}
+                className="w-5"
+                draggable="false"
+                alt="email"
+              />
+            </div>
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-gray text-base opacity-60 mt-1">
+                Matheusborgescode@gmail
+              </span>
+              <Image
+                src={copy}
+                className="w-4 cursor-pointer"
+                id="color"
+                alt="copiar"
+                onClick={copyTo}
+              />
+            </div>
           </motion.li>
 
           <motion.li
             variants={item}
             className="flex flex-col justify-center items-start"
           >
-            <span className="text-gray text-lg">
-              <span className="text-roxo text-2xl font-bold"> | </span>
-              Telefone
-            </span>
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-gray text-base uppercase">
+                <span className="text-roxo text-xl font-bold"> | </span>
+                Whatsapp
+              </span>
+              <Image
+                src={whatsapp}
+                className="w-5"
+                draggable="false"
+                alt="whatsapp"
+              />
+            </div>
 
-            <span className="text-gray text-base opacity-60 mt-1">
-              (11) 95794-3978
-            </span>
-          </motion.li>
-
-          <motion.li
-            variants={item}
-            className="flex flex-col justify-center items-start"
-          >
-            <span className="text-gray text-lg">
-              <span className="text-roxo text-2xl font-bold"> | </span>
-              Linkedin
-            </span>
-
-            <span className="text-roxo text-base mt-1">
+            <span className="text-gray text-base opacity-60 mt-1 hover:text-roxo hover:opacity-100">
               <a
-                href="https://linkedin.com/in/matheus-borges-coder"
+                href="https://wa.me/5511957943978?text=Ol%C3%A1%20Matheus%20Borges!"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver perfil
+                (11) 95794-3978
               </a>
             </span>
           </motion.li>
@@ -122,18 +179,48 @@ export function Contact() {
             variants={item}
             className="flex flex-col justify-center items-start"
           >
-            <span className="text-gray text-lg">
-              <span className="text-roxo text-2xl font-bold"> | </span>
-              Github
-            </span>
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-gray text-base uppercase">
+                <span className="text-roxo text-xl font-bold"> | </span>
+                Linkedin
+              </span>
+              <Image
+                src={linkedin}
+                className="w-5"
+                draggable="false"
+                alt="linkedin"
+              />
+            </div>
 
-            <span className="text-roxo text-base mt-1">
+            <span className="text-gray text-base opacity-60 mt-1 hover:text-roxo hover:opacity-100">
+              <a
+                href="https://linkedin.com/in/matheus-borges-coder"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @borges-coder
+              </a>
+            </span>
+          </motion.li>
+
+          <motion.li
+            variants={item}
+            className="flex flex-col justify-center items-start"
+          >
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-gray text-base uppercase">
+                <span className="text-roxo text-xl font-bold"> | </span>
+                Github
+              </span>
+              <Image src={git} className="w-6" draggable="false" alt="github" />
+            </div>
+            <span className="text-gray text-base opacity-60 mt-1 hover:text-roxo hover:opacity-100">
               <a
                 href="https://github.com/Borgeta-code"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver perfil
+                @borges-coder
               </a>
             </span>
           </motion.li>
