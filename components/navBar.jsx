@@ -11,14 +11,10 @@ export function NavBar() {
   return (
     <div className="flex justify-center items-center absolute top-2 right-4">
       <div className="flex justify-center items-center gap-6">
-        <a
-          href="https://www.canva.com/design/DAFR80w_In4/tsvs5SI924m5z3pEbHa1hA/view?utm_content=DAFR80w_In4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="/Cv Matheus Borges.pdf" download>
           <span className="text-gray text-sm ">
             <span className="text-roxo text-sm font-bold"> | </span>
-            Currículo
+            Download CV
           </span>
         </a>
         <a href="" onClick={smoothScrollTo}>

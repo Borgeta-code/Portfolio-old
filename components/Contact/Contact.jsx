@@ -93,7 +93,6 @@ export function Contact() {
         <span className="text-roxo text-2xl font-bold"> | </span>
         Contato
       </motion.h1>
-
       <motion.ul variants={container} initial="hidden" whileInView="visible">
         <div className="flex flex-col justify-center items-start gap-[30px]">
           <motion.li
@@ -226,7 +225,6 @@ export function Contact() {
           </motion.li>
         </div>
       </motion.ul>
-
       <div className="hidden flex-col justify-center items-center sm:p-3 contactForm">
         <motion.div
           initial={{ opacity: 0, x: -100, y: 100 }}
@@ -262,7 +260,6 @@ export function Contact() {
           <Form />
         </motion.div>
       </div>
-
       <motion.div
         onClick={smoothScrollTo}
         initial={{ opacity: 0 }}
