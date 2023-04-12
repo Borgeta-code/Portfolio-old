@@ -163,7 +163,7 @@ export function Contact() {
               />
             </div>
 
-            <span className="text-gray text-base opacity-60 mt-1 hover:text-roxo hover:opacity-100">
+            <span className="text-gray text-base opacity-60 mt-1">
               <a
                 href="https://wa.me/5511957943978?text=Ol%C3%A1%20Matheus%20Borges!"
                 target="_blank"
@@ -191,7 +191,7 @@ export function Contact() {
               />
             </div>
 
-            <span className="text-gray text-base opacity-60 mt-1 hover:text-roxo hover:opacity-100">
+            <span className="text-gray text-base opacity-60 mt-1">
               <a
                 href="https://linkedin.com/in/matheus-borges-coder"
                 target="_blank"
@@ -213,7 +213,7 @@ export function Contact() {
               </span>
               <Image src={git} className="w-6" draggable="false" alt="github" />
             </div>
-            <span className="text-gray text-base opacity-60 mt-1 hover:text-roxo hover:opacity-100">
+            <span className="text-gray text-base opacity-60 mt-1">
               <a
                 href="https://github.com/Borgeta-code"
                 target="_blank"

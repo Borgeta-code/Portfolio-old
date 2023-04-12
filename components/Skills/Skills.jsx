@@ -14,6 +14,7 @@ import angular from "../../public/img/angular.svg";
 import typescript from "../../public/img/typescript.svg";
 import sql from "../../public/img/mysql.svg";
 import nodejs from "../../public/img/nodejs.svg";
+import redux from "../../public/img/redux.svg";
 
 export function Skills() {
   const container = {
@@ -87,6 +88,8 @@ export function Skills() {
               w="w-8 mb-2 sm:mb-3 sm:w-16"
             />
             <SkillCard src={nodejs} skill="NODEJS" w="w-10 sm:w-20" />
+            <SkillCard src={angular} skill="ANGULAR" w="w-10 sm:w-20" />
+            <SkillCard src={redux} skill="REDUX" w="w-10 sm:w-20" />
           </div>
         </motion.ul>
       </div>
