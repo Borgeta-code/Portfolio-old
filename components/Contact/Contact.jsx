@@ -121,7 +121,7 @@ export function Contact() {
             className="flex flex-col justify-center items-start"
           >
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base uppercase">
+              <span className="text-gray text-base">
                 <span className="text-roxo text-xl font-bold"> | </span>
                 Email
               </span>
@@ -151,7 +151,7 @@ export function Contact() {
             className="flex flex-col justify-center items-start"
           >
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base uppercase">
+              <span className="text-gray text-base">
                 <span className="text-roxo text-xl font-bold"> | </span>
                 Whatsapp
               </span>
@@ -179,7 +179,7 @@ export function Contact() {
             className="flex flex-col justify-center items-start"
           >
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base uppercase">
+              <span className="text-gray text-base">
                 <span className="text-roxo text-xl font-bold"> | </span>
                 Linkedin
               </span>
@@ -207,7 +207,7 @@ export function Contact() {
             className="flex flex-col justify-center items-start"
           >
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base uppercase">
+              <span className="text-gray text-base">
                 <span className="text-roxo text-xl font-bold"> | </span>
                 Github
               </span>
