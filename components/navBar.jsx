@@ -11,7 +11,7 @@ export function NavBar() {
   return (
     <div className="flex justify-center items-center absolute top-2 right-4">
       <div className="flex justify-center items-center gap-6">
-        <a href="/Cv Matheus Borges.pdf" download>
+        <a href="/MATHEUS BORGES CV.pdf" download>
           <span className="text-gray text-sm ">
             <span className="text-roxo text-sm font-bold"> | </span>
             Download CV
