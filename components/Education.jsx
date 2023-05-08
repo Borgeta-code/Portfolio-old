@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import education from "../public/img/education.svg";
 import time from "../public/img/Time.svg";
+import PageTitle from "./PageTitle";
 import { motion } from "framer-motion";
 
 export function Education() {
@@ -11,7 +12,7 @@ export function Education() {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.8,
+        delayChildren: 0.6,
         staggerChildren: 0.2,
       },
     },
@@ -27,25 +28,13 @@ export function Education() {
 
   return (
     <section className="flex flex-col items-center justify-center h-screen relative">
-      <motion.h1
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 120,
-          damping: 20,
-          staggerChildren: 0.3,
-        }}
-        className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
-      >
-        <span className="text-roxo text-2xl font-bold"> | </span>
-        Formação acadêmica
-      </motion.h1>
+      <PageTitle title="Formação Acadêmica" />
 
       <motion.ul
         variants={container}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         className="flex flex-col justify-center items-start p-2 max-[320px]:p-1 "
       >
         <motion.li

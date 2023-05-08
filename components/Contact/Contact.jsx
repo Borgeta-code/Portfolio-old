@@ -12,6 +12,7 @@ import linkedin from "../../public/img/linkedin.svg";
 import git from "../../public/img/githubSocial.svg";
 import copy from "../../public/img/copy.svg";
 import message from "../../public/img/message.svg";
+import PageTitle from "../PageTitle";
 
 export function Contact() {
   const container = {
@@ -79,21 +80,14 @@ export function Contact() {
       id="contact"
       className="flex flex-col sm:flex-row items-center justify-center h-screen sm:gap-12 relative"
     >
-      <motion.h1
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 120,
-          damping: 20,
-          staggerChildren: 0.3,
-        }}
-        className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
+      <PageTitle title="Contato" />
+
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
       >
-        <span className="text-roxo text-2xl font-bold"> | </span>
-        Contato
-      </motion.h1>
-      <motion.ul variants={container} initial="hidden" whileInView="visible">
         <div className="flex flex-col justify-center items-start gap-[30px]">
           <motion.li
             variants={item}
@@ -229,6 +223,7 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, x: -100, y: 100 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
+          viewport={{ once: true }}
           transition={{
             type: "spring",
             stiffness: 80,
@@ -249,6 +244,7 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{
             type: "spring",
             stiffness: 80,

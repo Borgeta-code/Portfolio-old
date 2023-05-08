@@ -15,6 +15,7 @@ import typescript from "../../public/img/typescript.svg";
 import sql from "../../public/img/mysql.svg";
 import nodejs from "../../public/img/nodejs.svg";
 import redux from "../../public/img/redux.svg";
+import PageTitle from "../PageTitle";
 
 export function Skills() {
   const container = {
@@ -31,26 +32,14 @@ export function Skills() {
 
   return (
     <section className="flex items-center justify-center h-screen relative">
-      <motion.h1
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 120,
-          damping: 20,
-          staggerChildren: 0.3,
-        }}
-        className="text-gray text-2xl font-medium uppercase absolute top-5 left-4"
-      >
-        <span className="text-roxo text-2xl font-bold  "> | </span>
-        Tecnologias
-      </motion.h1>
+      <PageTitle title="Tecnologias" />
 
       <div className="flex justify-center items-center ">
         <motion.ul
           variants={container}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="flex flex-col w-max justify-center items-center gap-1"
         >
           <div className="flex justify-center items-center p-4 gap-6 sm:gap-10">
