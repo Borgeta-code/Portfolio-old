@@ -82,11 +82,14 @@ export function Contact() {
     >
       <PageTitle title="Contato" />
 
+      {/* Desktop */}
+
       <motion.ul
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        className="hidden contactForm"
       >
         <div className="flex flex-col justify-center items-start gap-[30px]">
           <motion.li
@@ -201,6 +204,129 @@ export function Contact() {
 
 
 
+
+
+      {/* Mobile */}
+      <div className="hidden sendMessage">
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="flex justify-center items-start gap-[30px]">
+            <div className="flex flex-col justify-center items-start gap-[30px]">
+              <motion.li
+                variants={item}
+                className="flex flex-col justify-center items-start"
+              >
+                <div className="flex justify-center items-center gap-2">
+                  <span className="text-roxo text-base font-bold">
+                    <span className="text-roxo text-xl font-bold"> | </span>
+                    Gmail
+              </span>
+                  <Image
+                    src={gmail}
+                    className="w-5"
+                    draggable="false"
+                    alt="email"
+                  />
+                </div>
+                <div className="flex justify-center items-center gap-2">
+                  <span className="text-gray text-base opacity-80 mt-1">
+                    Matheusborgescode@
+              </span>
+                </div>
+              </motion.li>
+
+              <motion.li
+                variants={item}
+                className="flex flex-col justify-center items-start"
+              >
+                <div className="flex justify-center items-center gap-2">
+                  <span className="text-roxo text-base font-bold">
+                    <span className="text-roxo text-xl font-bold"> | </span>
+                    Github
+              </span>
+                  <Image src={git} className="w-6" draggable="false" alt="github" />
+                </div>
+                <span className="text-gray text-base opacity-80 mt-1">
+                  <a
+                    href="https://github.com/Borgeta-code"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @borges-coder
+              </a>
+                </span>
+              </motion.li>
+            </div>
+
+            <div className="flex flex-col justify-center items-start gap-[30px]">
+              <motion.li
+                variants={item}
+                className="flex flex-col justify-center items-start"
+              >
+                <div className="flex justify-center items-center gap-2">
+                  <span className="text-roxo text-base font-bold">
+                    <span className="text-roxo text-xl font-bold"> | </span>
+                    Whatsapp
+              </span>
+                  <Image
+                    src={whatsapp}
+                    className="w-5"
+                    draggable="false"
+                    alt="whatsapp"
+                  />
+                </div>
+
+                <span className="text-gray text-base opacity-80 mt-1">
+                  <a
+                    href="https://wa.me/5511957943978?text=Ol%C3%A1%20Matheus%20Borges!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    (11) 95794-3978
+              </a>
+                </span>
+              </motion.li>
+
+
+              <motion.li
+                variants={item}
+                className="flex flex-col justify-center items-start"
+              >
+                <div className="flex justify-center items-center gap-2 ">
+                  <span className="text-roxo text-base font-bold">
+                    <span className="text-roxo text-xl font-bold"> | </span>
+                    Linkedin
+              </span>
+                  <Image
+                    src={linkedin}
+                    className="w-5"
+                    draggable="false"
+                    alt="linkedin"
+                  />
+                </div>
+
+                <span className="text-gray text-base opacity-80 mt-1">
+                  <a
+                    href="https://linkedin.com/in/matheus-borges-coder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @borges-coder
+              </a>
+                </span>
+              </motion.li>
+            </div>
+          </div>
+        </motion.ul>
+      </div>
+
+
+      {/* Form */}
+
       <div className="hidden flex-col justify-center items-center sm:p-3 contactForm">
         <motion.div
           initial={{ opacity: 0, x: -100, y: 100 }}
@@ -233,7 +359,7 @@ export function Contact() {
             damping: 20,
             delay: 1.7,
           }}
-          className="flex justify-center items-center mt-1"
+          className="flex justify-center items-center mt-2"
         >
           <Form />
         </motion.div>

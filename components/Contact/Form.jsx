@@ -66,7 +66,7 @@ export function Form() {
       <Toaster position="bottom-left" />
       <form
         onSubmit={handleSubmit}
-        className="flex w-max flex-col justify-center items-center md:p-3"
+        className="flex w-max flex-col justify-center items-center sm:p-3"
       >
         <div id="containerInput" className="flex justify-center mb-4">
           <label>Nome</label>
