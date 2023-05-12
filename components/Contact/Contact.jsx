@@ -108,18 +108,16 @@ export function Contact() {
                 alt="email"
               />
             </div>
-            <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base opacity-80 mt-1">
+
+            <span className="text-gray text-base opacity-80 mt-1">
+              <a
+                href="mailto:matheusborgescode@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Matheusborgescode@
-              </span>
-              <Image
-                src={copy}
-                className="w-4 cursor-pointer"
-                id="color"
-                alt="copiar"
-                onClick={copyTo}
-              />
-            </div>
+              </a>
+            </span>
           </motion.li>
 
           <motion.li
@@ -202,12 +200,8 @@ export function Contact() {
         </div>
       </motion.ul>
 
-
-
-
-
       {/* Mobile */}
-      <div className="hidden sendMessage">
+      <div className="hidden sendMessage flex-col gap-8">
         <motion.ul
           variants={container}
           initial="hidden"
@@ -224,7 +218,7 @@ export function Contact() {
                   <span className="text-roxo text-base font-bold">
                     <span className="text-roxo text-xl font-bold"> | </span>
                     Gmail
-              </span>
+                  </span>
                   <Image
                     src={gmail}
                     className="w-5"
@@ -235,7 +229,7 @@ export function Contact() {
                 <div className="flex justify-center items-center gap-2">
                   <span className="text-gray text-base opacity-80 mt-1">
                     Matheusborgescode@
-              </span>
+                  </span>
                 </div>
               </motion.li>
 
@@ -247,8 +241,13 @@ export function Contact() {
                   <span className="text-roxo text-base font-bold">
                     <span className="text-roxo text-xl font-bold"> | </span>
                     Github
-              </span>
-                  <Image src={git} className="w-6" draggable="false" alt="github" />
+                  </span>
+                  <Image
+                    src={git}
+                    className="w-6"
+                    draggable="false"
+                    alt="github"
+                  />
                 </div>
                 <span className="text-gray text-base opacity-80 mt-1">
                   <a
@@ -257,7 +256,7 @@ export function Contact() {
                     rel="noopener noreferrer"
                   >
                     @borges-coder
-              </a>
+                  </a>
                 </span>
               </motion.li>
             </div>
@@ -271,7 +270,7 @@ export function Contact() {
                   <span className="text-roxo text-base font-bold">
                     <span className="text-roxo text-xl font-bold"> | </span>
                     Whatsapp
-              </span>
+                  </span>
                   <Image
                     src={whatsapp}
                     className="w-5"
@@ -287,10 +286,9 @@ export function Contact() {
                     rel="noopener noreferrer"
                   >
                     (11) 95794-3978
-              </a>
+                  </a>
                 </span>
               </motion.li>
-
 
               <motion.li
                 variants={item}
@@ -300,7 +298,7 @@ export function Contact() {
                   <span className="text-roxo text-base font-bold">
                     <span className="text-roxo text-xl font-bold"> | </span>
                     Linkedin
-              </span>
+                  </span>
                   <Image
                     src={linkedin}
                     className="w-5"
@@ -316,14 +314,52 @@ export function Contact() {
                     rel="noopener noreferrer"
                   >
                     @borges-coder
-              </a>
+                  </a>
                 </span>
               </motion.li>
             </div>
           </div>
         </motion.ul>
-      </div>
 
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 20,
+            staggerChildren: 0.3,
+            delay: 1,
+          }}
+          className="flex justify-center items-center gap-5"
+        >
+          <div className="w-20 h-[2px] bg-roxo opacity-60" />
+          <span className="text-sm text-gray opacity-60 uppercase">Ou</span>
+          <div className="w-20 h-[2px] bg-roxo opacity-60" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 20,
+            staggerChildren: 0.3,
+            delay: 1.3,
+          }}
+          className="flex justify-center items-center"
+        >
+          <Link
+            href="/contact"
+            className="bg-roxo rounded-lg py-2 px-7 font-bold text-base text-white opacity-90"
+          >
+            Mande uma mensagem
+          </Link>
+        </motion.div>
+      </div>
 
       {/* Form */}
 
@@ -386,5 +422,3 @@ export function Contact() {
     </section>
   );
 }
-
-
