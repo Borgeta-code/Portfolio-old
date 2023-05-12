@@ -14,7 +14,7 @@ import angular from "../../public/img/angular.svg";
 import typescript from "../../public/img/typescript.svg";
 import sql from "../../public/img/mysql.svg";
 import nodejs from "../../public/img/nodejs.svg";
-import redux from "../../public/img/redux.svg";
+import bootstrap from "../../public/img/bootstrap.svg";
 import PageTitle from "../PageTitle";
 
 export function Skills() {
@@ -78,7 +78,7 @@ export function Skills() {
             />
             <SkillCard src={nodejs} skill="NODEJS" w="w-10 sm:w-20" />
             <SkillCard src={angular} skill="ANGULAR" w="w-10 sm:w-20" />
-            <SkillCard src={redux} skill="REDUX" w="w-10 sm:w-20" />
+            <SkillCard src={bootstrap} skill="BOOTSTRAP" w="w-10 sm:w-20" />
           </div>
         </motion.ul>
       </div>

@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Matheus Borges | Fullstack Developer</title>
-        <meta name="description" content="Portfolio Matheus Borges" />
+        <title>Matheus Borges | FrontEnd Developer</title>
+        <meta name="description" content="Portfólio Matheus Borges" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

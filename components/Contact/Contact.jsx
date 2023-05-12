@@ -91,33 +91,12 @@ export function Contact() {
         <div className="flex flex-col justify-center items-start gap-[30px]">
           <motion.li
             variants={item}
-            className="hidden flex-col justify-center items-start sendMessage"
-          >
-            <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base">
-                <span className="text-roxo text-xl font-bold"> | </span>
-                Mensagem
-              </span>
-              <Image
-                src={message}
-                className="w-6"
-                draggable="false"
-                alt="message"
-              />
-            </div>
-            <Link href="/contact">
-              <span className="text-roxo text-base mt-1">Entre em contato</span>
-            </Link>
-          </motion.li>
-
-          <motion.li
-            variants={item}
             className="flex flex-col justify-center items-start"
           >
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base">
+              <span className="text-roxo text-base font-bold">
                 <span className="text-roxo text-xl font-bold"> | </span>
-                Email
+                Gmail
               </span>
               <Image
                 src={gmail}
@@ -127,8 +106,8 @@ export function Contact() {
               />
             </div>
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base opacity-60 mt-1">
-                Matheusborgescode@gmail
+              <span className="text-gray text-base opacity-80 mt-1">
+                Matheusborgescode@
               </span>
               <Image
                 src={copy}
@@ -145,7 +124,7 @@ export function Contact() {
             className="flex flex-col justify-center items-start"
           >
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base">
+              <span className="text-roxo text-base font-bold">
                 <span className="text-roxo text-xl font-bold"> | </span>
                 Whatsapp
               </span>
@@ -157,7 +136,7 @@ export function Contact() {
               />
             </div>
 
-            <span className="text-gray text-base opacity-60 mt-1">
+            <span className="text-gray text-base opacity-80 mt-1">
               <a
                 href="https://wa.me/5511957943978?text=Ol%C3%A1%20Matheus%20Borges!"
                 target="_blank"
@@ -172,8 +151,8 @@ export function Contact() {
             variants={item}
             className="flex flex-col justify-center items-start"
           >
-            <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base">
+            <div className="flex justify-center items-center gap-2 ">
+              <span className="text-roxo text-base font-bold">
                 <span className="text-roxo text-xl font-bold"> | </span>
                 Linkedin
               </span>
@@ -185,7 +164,7 @@ export function Contact() {
               />
             </div>
 
-            <span className="text-gray text-base opacity-60 mt-1">
+            <span className="text-gray text-base opacity-80 mt-1">
               <a
                 href="https://linkedin.com/in/matheus-borges-coder"
                 target="_blank"
@@ -201,13 +180,13 @@ export function Contact() {
             className="flex flex-col justify-center items-start"
           >
             <div className="flex justify-center items-center gap-2">
-              <span className="text-gray text-base">
+              <span className="text-roxo text-base font-bold">
                 <span className="text-roxo text-xl font-bold"> | </span>
                 Github
               </span>
               <Image src={git} className="w-6" draggable="false" alt="github" />
             </div>
-            <span className="text-gray text-base opacity-60 mt-1">
+            <span className="text-gray text-base opacity-80 mt-1">
               <a
                 href="https://github.com/Borgeta-code"
                 target="_blank"
@@ -219,6 +198,9 @@ export function Contact() {
           </motion.li>
         </div>
       </motion.ul>
+
+
+
       <div className="hidden flex-col justify-center items-center sm:p-3 contactForm">
         <motion.div
           initial={{ opacity: 0, x: -100, y: 100 }}
@@ -278,3 +260,5 @@ export function Contact() {
     </section>
   );
 }
+
+
