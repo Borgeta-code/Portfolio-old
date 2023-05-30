@@ -1,17 +1,17 @@
-import React, { useCallback, useState, useEffect } from "react";
-import { ProjectCard } from "./ProjectCard";
-import { motion } from "framer-motion";
-import { DotButton } from "./dot";
 import useEmblaCarousel from "embla-carousel-react";
-import Transimple from "../../public/img/Transimple.svg";
-import Qrmaker from "../../public/img/QrMaker.svg";
-import asr from "../../public/img/asr.svg";
-import weather from "../../public/img/Weathermate.svg";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import right from "../../public/img/rigthArrow.svg";
+import React, { useCallback, useEffect, useState } from "react";
+import Qrmaker from "../../public/img/QrMaker.svg";
+import spacetime from "../../public/img/Spacetime.svg";
+import Transimple from "../../public/img/Transimple.svg";
+import weather from "../../public/img/Weathermate.svg";
+import asr from "../../public/img/asr.svg";
 import left from "../../public/img/leftArrow.svg";
-import Slide from "../../public/img/Slide.svg";
+import right from "../../public/img/rigthArrow.svg";
 import PageTitle from "../PageTitle";
+import { ProjectCard } from "./ProjectCard";
+import { DotButton } from "./dot";
 
 export function Projects() {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -132,6 +132,15 @@ export function Projects() {
                   techs="Laravel, Javascript, FullCalendar, Bootstrap e MySQL"
                   src={asr}
                   git="https://github.com/Borgeta-code/Agendamento-de-Salas-e-Recursos---ASR"
+                />
+              </div>
+              <div className="embla__slide ">
+                <ProjectCard
+                  name="SpaceTime"
+                  description="Aplicação completa desenvolvida no NLW da Rocketseat, nela é possível criar, excluir e editar memórias"
+                  techs=" Nextjs, Fastify, Node.js, TypeScript, TailwindCSS, Prisma, SQLite "
+                  src={spacetime}
+                  git="https://github.com/Borgeta-code/SpaceTime"
                 />
               </div>
               <div className="embla__slide ">
