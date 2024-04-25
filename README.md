@@ -1,4 +1,4 @@
-# Portfolio (OLD)
+# Portfolio (old)
 
 O meu portfólio contém informações de expêriencias, projetos, tecnologias e contato. Foi um projeto desafiador e muito interessante de se construir.
 
